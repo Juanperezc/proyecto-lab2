@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ProyectoDamageDefinitivo
+namespace ProYectoX
 {
     public partial class ActualizarInstructor : Gtk.Window
     {
@@ -7,10 +7,6 @@ namespace ProyectoDamageDefinitivo
                 base(Gtk.WindowType.Toplevel)
         {
             this.Build();
-        }
-
-        protected void OnBtnactualizarinstClicked(object sender, EventArgs e)
-        {
         }
     }
 }

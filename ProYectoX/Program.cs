@@ -1,7 +1,7 @@
 ﻿using System;
 using Gtk;
 
-namespace ProyectoDamageDefinitivo
+namespace ProYectoX
 {
     class MainClass
     {

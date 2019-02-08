@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{D0A82FE3-FEB4-4F68-A271-FCAD739894E3}</ProjectGuid>
+    <ProjectGuid>{F43212D1-E154-43AE-A134-A5C4DD4E9C4D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ProyectoDamageDefinitivo</RootNamespace>
-    <AssemblyName>ProyectoDamageDefinitivo</AssemblyName>
+    <RootNamespace>ProYectoX</RootNamespace>
+    <AssemblyName>ProYectoX</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -47,6 +47,10 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Mono.Posix" />
+    <Reference Include="System.Data" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Drivers\Mysql\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -55,18 +59,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="Login.cs" />
+    <Compile Include="MainWindow.cs" />
     <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Opciones.cs" />
-    <Compile Include="gtk-gui\ProyectoDamageDefinitivo.Validaciones.cs" />
+    <Compile Include="gtk-gui\ProYectoX.Opciones.cs" />
     <Compile Include="ArchivosMaestros.cs" />
-    <Compile Include="gtk-gui\ProyectoDamageDefinitivo.ArchivosMaestros.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ArchivosMaestros.cs" />
     <Compile Include="ActualizarInstructor.cs" />
-    <Compile Include="gtk-gui\ProyectoDamageDefinitivo.ActualizarInstructor.cs" />
-    <Compile Include="ActualizarEstudiante.cs" />
-    <Compile Include="gtk-gui\ProyectoDamageDefinitivo.ActualizarEstudiante.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ActualizarInstructor.cs" />
+    <Compile Include="Opciones2.cs" />
+    <Compile Include="gtk-gui\ProYectoX.Opciones2.cs" />
+    <Compile Include="gtk-gui\ProYectoX.Validaciones.cs" />
+    <Compile Include="ConectorBD.cs" />
+    <Compile Include="Validacioness.cs" />
+    <Compile Include="TiposReportes.cs" />
+    <Compile Include="gtk-gui\ProYectoX.TiposReportes.cs" />
+    <Compile Include="ReporteCursos.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ReporteCursos.cs" />
+    <Compile Include="ReporteGrupos.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ReporteGrupos.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
