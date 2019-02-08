@@ -10,8 +10,13 @@ namespace ProYectoX
         Window Vn;
         public ConectorBD(Window nomvent)
         {
-            string stringconexion = "SERVER=localhost:3306; DATABASE=damage; UID=root; PASSWORD=''; SslMode=none";
-            con = new MySqlConnection(stringconexion);
+            MySqlConnectionStringBuilder scb = new MySqlConnectionStringBuilder();
+            scb.Server = "localhost";
+            scb.Port = 3306;
+            scb.UserID = "root";
+            scb.Database = "proyectolabii";
+            scb.Password = "2514182657";
+            con = new MySqlConnection(scb.ConnectionString);
             Vn = nomvent;
 
         }
@@ -61,6 +66,7 @@ namespace ProYectoX
             catch (MySqlException ex)
             {
                 Mensaje(ex.Message, ButtonsType.Ok, MessageType.Error, "Error");
+                System.Console.Write(ex.Message);
             }
             return false;
         }
@@ -138,11 +144,43 @@ namespace ProYectoX
             }
             return false;
         }
+        public bool Buscar2(string col, string tabla, string parametro, string col2, string parametro2)
+        {
+            string sentencia = string.Format("SELECT count({0}) FROM {1} WHERE {0} = '{2}' AND {3} = '{4}' AND estatus = 'A'", col, tabla, parametro, col2, parametro2);
+            //Abre la conexión.
+            if (Conectar())
+            {
+                //Crea un comando
+                MySqlCommand cmd = new MySqlCommand(sentencia, con);
 
+                try
+                {
+                    int n = Convert.ToInt16(cmd.ExecuteScalar());
+                    if (n == 1)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    Mensaje(ex.Message, ButtonsType.Ok, MessageType.Error, "Error");
+                }
+                finally
+                {
+                    cmd.Dispose();
+                    Desconectar();
+                }
+            }
+            return false;
+        }
         //Verifica si un registro fue previamente eliminado
         public bool BuscarEliminado(string col, string tabla, string parametro, string estatus)
         {
-            string sentencia = string.Format("SELECT count({0}) FROM {1} WHERE {0} = '{2}' AND {4} = 'I'", col, tabla, parametro, estatus);
+            string sentencia = string.Format("SELECT count({0}) FROM {1} WHERE {0} = '{2}' AND {3} = 'I'", col, tabla, parametro, estatus);
             //Abre la conexión.
             if (Conectar())
             {
@@ -220,6 +258,7 @@ namespace ProYectoX
 
                     while (read.Read())
                     {
+
                         //Cargar el arreglo con los datos leídos
                         for (int i = 0; i < p; i++)
                             array[i] = read[i].ToString();

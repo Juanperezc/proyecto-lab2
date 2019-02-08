@@ -30,26 +30,30 @@ public partial class MainWindow : Gtk.Window
         { vl.DialogOK("AVISO", "\nDisculpe, debe llenar todos los campos.", "WARNING"); }
         else
         {
-            if (cone.Buscar("nombre_usuario", "usuarios", entusuario.Text, "estatus") == true)//Valida si lo encuentra
+            if (cone.Buscar2("nombre_usuario", "usuarios", entusuario.Text, "clave", entcontrasena.Text) == true)//Valida si lo encuentra
             {
-                string sent = string.Format("Select contraseña, tipo_usuario from usuarios where nombre_usuario='{0}' and estatus='A'", entusuario.Text);
+                System.Console.WriteLine("Test 1 paso");
+                string sent = string.Format("SELECT id_tipousuario FROM usuarios WHERE nombre_usuario='{0}' AND estatus='A'", entusuario.Text);
                 //   "SELECT * FROM usuarios WHERE estatus= @estatus and nombre_usuario= @nombre_usuario and contraseña = @contraseña");
-                string[] datos = cone.Listado(2, sent);
+                string[] datos = cone.Listado(1, sent);
+              
+                System.Console.WriteLine("Tipo de usuario :" + datos[0]);
+            
+                new ProYectoX.Opciones(Convert.ToInt16(datos[0])).Show();
 
-                if (datos[0] == entcontrasena.Text)
-                {
-                    new ProYectoX.Opciones(Convert.ToInt16(datos[1]));
-
-                    this.Hide();
-                }
-                else
-                {
-                    vl.DialogOK("INCORRECTO", "\nDisculpe, debe ingresar un usuario o contraseña válidos.", "WARNING");
-                    entusuario.IsFocus = true;
-
-                }
-
+                   this.Hide();
+                    
+           
+       
             }
+
+            else
+                {
+                 vl.DialogOK("INCORRECTO", "\nDisculpe, debe ingresar un usuario o contraseña válidos.", "WARNING");
+                 entusuario.IsFocus = true;
+
+              }
+
         }
     }
 
@@ -63,6 +67,7 @@ public partial class MainWindow : Gtk.Window
     }
     protected void OnBtningresarClicked(object sender, EventArgs e)
     {
+        System.Console.WriteLine("Click 1");
         entraralsistema();
         //System.Console.WriteLine(this.cone.Cadenaconexion());
         //new ProYectoX.Opciones();

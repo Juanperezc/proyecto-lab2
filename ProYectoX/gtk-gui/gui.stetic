@@ -106,6 +106,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">Ingresar</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtningresarClicked" />
           </widget>
           <packing>
             <property name="Position">3</property>

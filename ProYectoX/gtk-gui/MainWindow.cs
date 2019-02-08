@@ -160,5 +160,6 @@ public partial class MainWindow
 		this.DefaultWidth = 334;
 		this.DefaultHeight = 467;
 		this.Show();
+		this.btningresar.Clicked += new global::System.EventHandler(this.OnBtningresarClicked);
 	}
 }
