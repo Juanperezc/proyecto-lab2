@@ -49,7 +49,7 @@
     <Reference Include="Mono.Posix" />
     <Reference Include="System.Data" />
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\Drivers\Mysql\v4.5.2\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\Descargas\mysql-connector-net-6.9.12-noinstall\v4.0\MySql.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -71,7 +71,6 @@
     <Compile Include="gtk-gui\ProYectoX.ActualizarInstructor.cs" />
     <Compile Include="Opciones2.cs" />
     <Compile Include="gtk-gui\ProYectoX.Opciones2.cs" />
-    <Compile Include="gtk-gui\ProYectoX.Validaciones.cs" />
     <Compile Include="ConectorBD.cs" />
     <Compile Include="Validacioness.cs" />
     <Compile Include="TiposReportes.cs" />
