@@ -48,6 +48,7 @@ namespace ProYectoX
 			this.lblfecha.Name = "lblfecha";
 			this.lblfecha.Xalign = 0F;
 			this.lblfecha.LabelProp = "";
+			this.lblfecha.Xpad = 44;
 			this.vbox1.Add(this.lblfecha);
 			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.lblfecha]));
 			w1.Position = 0;
@@ -65,23 +66,22 @@ namespace ProYectoX
 			// Container child vbox2.Gtk.Box+BoxChild
 			this.lbltitulo = new global::Gtk.Label();
 			this.lbltitulo.Name = "lbltitulo";
+			this.lbltitulo.Ypad = 5;
 			this.lbltitulo.LabelProp = global::Mono.Unix.Catalog.GetString("Seleccione el reporte que desea");
 			this.vbox2.Add(this.lbltitulo);
 			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.lbltitulo]));
-			w3.Position = 1;
+			w3.Position = 0;
 			w3.Expand = false;
-			w3.Fill = false;
 			// Container child vbox2.Gtk.Box+BoxChild
 			this.radiobutton1 = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Listados de Cursos"));
 			this.radiobutton1.CanFocus = true;
 			this.radiobutton1.Name = "radiobutton1";
-			this.radiobutton1.Active = true;
 			this.radiobutton1.DrawIndicator = true;
 			this.radiobutton1.UseUnderline = true;
 			this.radiobutton1.Group = new global::GLib.SList(global::System.IntPtr.Zero);
 			this.vbox2.Add(this.radiobutton1);
 			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.radiobutton1]));
-			w4.Position = 2;
+			w4.Position = 1;
 			w4.Expand = false;
 			w4.Fill = false;
 			// Container child vbox2.Gtk.Box+BoxChild
@@ -93,7 +93,7 @@ namespace ProYectoX
 			this.radiobutton2.Group = this.radiobutton1.Group;
 			this.vbox2.Add(this.radiobutton2);
 			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.radiobutton2]));
-			w5.Position = 3;
+			w5.Position = 2;
 			w5.Expand = false;
 			w5.Fill = false;
 			// Container child vbox2.Gtk.Box+BoxChild
@@ -124,7 +124,7 @@ namespace ProYectoX
 			w7.Fill = false;
 			this.vbox2.Add(this.hbox4);
 			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.hbox4]));
-			w8.Position = 4;
+			w8.Position = 3;
 			w8.Expand = false;
 			w8.Fill = false;
 			this.hbox3.Add(this.vbox2);
@@ -140,6 +140,7 @@ namespace ProYectoX
 			this.lblhora = new global::Gtk.Label();
 			this.lblhora.HeightRequest = 28;
 			this.lblhora.Name = "lblhora";
+			this.lblhora.Xpad = 55;
 			this.lblhora.Xalign = 1F;
 			this.lblhora.LabelProp = "";
 			this.vbox3.Add(this.lblhora);
@@ -157,8 +158,8 @@ namespace ProYectoX
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 231;
-			this.DefaultHeight = 124;
+			this.DefaultWidth = 435;
+			this.DefaultHeight = 134;
 			this.Show();
 			this.btncontinuar.Clicked += new global::System.EventHandler(this.OnBtncontinuarClicked);
 		}

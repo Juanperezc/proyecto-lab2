@@ -4,6 +4,14 @@ namespace ProYectoX
 {
 	public partial class ReporteGrupos
 	{
+		private global::Gtk.VBox vbox1;
+
+		private global::Gtk.HBox hbox1;
+
+		private global::Gtk.Label lblfecha;
+
+		private global::Gtk.Label lblhora;
+
 		protected virtual void Build()
 		{
 			global::Stetic.Gui.Initialize(this);
@@ -11,6 +19,44 @@ namespace ProYectoX
 			this.Name = "ProYectoX.ReporteGrupos";
 			this.Title = global::Mono.Unix.Catalog.GetString("ReporteGrupos");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+			// Container child ProYectoX.ReporteGrupos.Gtk.Container+ContainerChild
+			this.vbox1 = new global::Gtk.VBox();
+			this.vbox1.Name = "vbox1";
+			this.vbox1.Spacing = 6;
+			// Container child vbox1.Gtk.Box+BoxChild
+			this.hbox1 = new global::Gtk.HBox();
+			this.hbox1.Name = "hbox1";
+			this.hbox1.Spacing = 6;
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.lblfecha = new global::Gtk.Label();
+			this.lblfecha.Name = "lblfecha";
+			this.lblfecha.Xpad = 78;
+			this.lblfecha.Ypad = 2;
+			this.lblfecha.Xalign = 0F;
+			this.lblfecha.Yalign = 0F;
+			this.hbox1.Add(this.lblfecha);
+			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.lblfecha]));
+			w1.Position = 0;
+			w1.Expand = false;
+			w1.Fill = false;
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.lblhora = new global::Gtk.Label();
+			this.lblhora.Name = "lblhora";
+			this.lblhora.Xpad = 75;
+			this.lblhora.Ypad = 2;
+			this.lblhora.Xalign = 1F;
+			this.lblhora.Yalign = 0F;
+			this.hbox1.Add(this.lblhora);
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.lblhora]));
+			w2.Position = 1;
+			w2.Expand = false;
+			w2.Fill = false;
+			this.vbox1.Add(this.hbox1);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
+			w3.Position = 2;
+			w3.Expand = false;
+			w3.Fill = false;
+			this.Add(this.vbox1);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();

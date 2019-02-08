@@ -20,17 +20,18 @@ namespace ProYectoX
             }
             else if (tipo == 2)
             {
-                //btnreportes.Sensitive = true;
+                btnreportes.Sensitive = true;
             }
             else if (tipo == 3)
             {
                 btnactualizar.Sensitive = true;
-             //   btnreportes.Sensitive = true;
+               btnreportes.Sensitive = true;
             }
         }
         protected void OnBtnactualizarClicked(object sender, EventArgs e)
         {
             new ArchivosMaestros();
+            this.Hide();
 
 
         }
@@ -51,8 +52,8 @@ namespace ProYectoX
         protected bool update_fechahora()
         {
 
-            //lblfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
-           // lblhora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            lblfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblhora.Text = DateTime.Now.ToString("hh:mm:ss tt");
 
             return true;
         }

@@ -20,8 +20,8 @@ namespace ProYectoX
 
         protected bool update_fechahora()
         {
-            //lblfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
-           // lblhora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            lblfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblhora.Text = DateTime.Now.ToString("hh:mm:ss tt");
 
             return true;
         }
