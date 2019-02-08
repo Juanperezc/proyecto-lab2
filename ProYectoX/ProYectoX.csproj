@@ -79,6 +79,10 @@
     <Compile Include="gtk-gui\ProYectoX.ReporteCursos.cs" />
     <Compile Include="ReporteGrupos.cs" />
     <Compile Include="gtk-gui\ProYectoX.ReporteGrupos.cs" />
+    <Compile Include="ListadoArchivos.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ListadoArchivos.cs" />
+    <Compile Include="Masopciones.cs" />
+    <Compile Include="gtk-gui\ProYectoX.Masopciones.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

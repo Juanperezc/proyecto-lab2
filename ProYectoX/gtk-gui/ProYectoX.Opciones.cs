@@ -81,6 +81,7 @@ namespace ProYectoX
 			this.lblfecha = new global::Gtk.Label();
 			this.lblfecha.Name = "lblfecha";
 			this.lblfecha.Xalign = 0F;
+			this.lblfecha.LabelProp = "";
 			this.hbox2.Add(this.lblfecha);
 			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.lblfecha]));
 			w5.Position = 0;
@@ -91,6 +92,7 @@ namespace ProYectoX
 			this.lblhora.HeightRequest = 28;
 			this.lblhora.Name = "lblhora";
 			this.lblhora.Xalign = 1F;
+			this.lblhora.LabelProp = "";
 			this.hbox2.Add(this.lblhora);
 			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.lblhora]));
 			w6.Position = 1;

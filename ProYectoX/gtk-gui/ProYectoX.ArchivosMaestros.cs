@@ -10,6 +10,8 @@ namespace ProYectoX
 
 		private global::Gtk.Button btnarchinstructor;
 
+		private global::Gtk.Button btnestudiante;
+
 		private global::Gtk.HBox hbox5;
 
 		private global::Gtk.Label lblfecha;
@@ -42,11 +44,22 @@ namespace ProYectoX
 			w1.Position = 0;
 			w1.Expand = false;
 			w1.Fill = false;
-			this.vbox4.Add(this.hbox1);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.hbox1]));
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.btnestudiante = new global::Gtk.Button();
+			this.btnestudiante.CanFocus = true;
+			this.btnestudiante.Name = "btnestudiante";
+			this.btnestudiante.UseUnderline = true;
+			this.btnestudiante.Label = global::Mono.Unix.Catalog.GetString("Estudiante");
+			this.hbox1.Add(this.btnestudiante);
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.btnestudiante]));
 			w2.Position = 1;
 			w2.Expand = false;
 			w2.Fill = false;
+			this.vbox4.Add(this.hbox1);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.hbox1]));
+			w3.Position = 1;
+			w3.Expand = false;
+			w3.Fill = false;
 			// Container child vbox4.Gtk.Box+BoxChild
 			this.hbox5 = new global::Gtk.HBox();
 			this.hbox5.Name = "hbox5";
@@ -57,27 +70,29 @@ namespace ProYectoX
 			this.lblfecha.Ypad = 2;
 			this.lblfecha.Xalign = 0F;
 			this.lblfecha.Yalign = 0F;
+			this.lblfecha.LabelProp = "";
 			this.hbox5.Add(this.lblfecha);
-			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.lblfecha]));
-			w3.Position = 0;
-			w3.Expand = false;
-			w3.Fill = false;
+			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.lblfecha]));
+			w4.Position = 0;
+			w4.Expand = false;
+			w4.Fill = false;
 			// Container child hbox5.Gtk.Box+BoxChild
 			this.lblhora = new global::Gtk.Label();
 			this.lblhora.Name = "lblhora";
 			this.lblhora.Ypad = 2;
 			this.lblhora.Xalign = 1F;
 			this.lblhora.Yalign = 0F;
+			this.lblhora.LabelProp = "";
 			this.hbox5.Add(this.lblhora);
-			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.lblhora]));
-			w4.Position = 1;
-			w4.Expand = false;
-			w4.Fill = false;
-			this.vbox4.Add(this.hbox5);
-			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.hbox5]));
-			w5.Position = 5;
+			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.lblhora]));
+			w5.Position = 1;
 			w5.Expand = false;
 			w5.Fill = false;
+			this.vbox4.Add(this.hbox5);
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.hbox5]));
+			w6.Position = 5;
+			w6.Expand = false;
+			w6.Fill = false;
 			this.Add(this.vbox4);
 			if ((this.Child != null))
 			{
@@ -87,6 +102,7 @@ namespace ProYectoX
 			this.DefaultHeight = 300;
 			this.Show();
 			this.btnarchinstructor.Clicked += new global::System.EventHandler(this.OnBtnarchinstructorClicked);
+			this.btnestudiante.Clicked += new global::System.EventHandler(this.OnBtnestudianteClicked);
 		}
 	}
 }

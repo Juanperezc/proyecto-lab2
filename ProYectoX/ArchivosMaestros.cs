@@ -28,6 +28,13 @@ namespace ProYectoX
         protected void OnBtnarchinstructorClicked(object sender, EventArgs e)
         {
             new ProYectoX.ActualizarInstructor();
+            Hide();
+        }
+
+        protected void OnBtnestudianteClicked(object sender, EventArgs e)
+        {
+            new ProYectoX.ListadoArchivos();
+            Hide();
         }
     }
 }
