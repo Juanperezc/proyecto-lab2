@@ -191,6 +191,7 @@ namespace ProYectoX
 			// Container child hbox4.Gtk.Box+BoxChild
 			this.lblfecha = new global::Gtk.Label();
 			this.lblfecha.Name = "lblfecha";
+			this.lblfecha.Xpad = 148;
 			this.lblfecha.Ypad = 2;
 			this.lblfecha.Xalign = 0F;
 			this.lblfecha.Yalign = 0F;
@@ -202,6 +203,7 @@ namespace ProYectoX
 			// Container child hbox4.Gtk.Box+BoxChild
 			this.lblhora = new global::Gtk.Label();
 			this.lblhora.Name = "lblhora";
+			this.lblhora.Xpad = 109;
 			this.lblhora.Ypad = 2;
 			this.lblhora.Xalign = 1F;
 			this.lblhora.Yalign = 0F;

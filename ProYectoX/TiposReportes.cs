@@ -18,8 +18,8 @@ namespace ProYectoX
 
         protected bool update_fechahora()
         {
-            //lblfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            //lblhora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            lblfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblhora.Text = DateTime.Now.ToString("hh:mm:ss tt");
 
             return true;
         }
@@ -31,12 +31,14 @@ namespace ProYectoX
             //pero no se como se llama el metodo en mono que funcione como 
             //checked
             //else {}
-            //if(radiobutton1.Active == true){
-            // //   new ProYectoX.ReporteCursos;
-            //}
-            //else{
-            //   // new ProYectoX.ReporteGrupos;
-            //}
+            if(radiobutton1.Active == true){
+              new ProYectoX.ReporteCursos();
+                this.Hide();
+            }
+            else{
+              new ProYectoX.ReporteGrupos();
+                this.Hide();
+            }
         }
     }
 }
