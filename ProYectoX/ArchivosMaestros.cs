@@ -27,7 +27,8 @@ namespace ProYectoX
 
         protected void OnBtnarchinstructorClicked(object sender, EventArgs e)
         {
-            new ProYectoX.ActualizarInstructor();
+            ProYectoX.ListadoArchivos list = new ListadoArchivos();
+            list.Show();
             Hide();
         }
 
@@ -36,6 +37,38 @@ namespace ProYectoX
             ListadoArchivos listarch = new ProYectoX.ListadoArchivos("estudiantes");
             listarch.Show();
             Hide();
+        }
+
+        protected void OnButton1Clicked(object sender, EventArgs e)
+        {
+        }
+
+        protected void OnBtncursoClicked(object sender, EventArgs e)
+        {
+            ProYectoX.ActualizarCursos actcurso = new ProYectoX.ActualizarCursos();
+            actcurso.Show();
+            Hide();
+        }
+
+        protected void OnBtngrupoClicked(object sender, EventArgs e)
+        {
+            ProYectoX.ActualizarGrupo actgrupo = new ProYectoX.ActualizarGrupo();
+            actgrupo.Show();
+            Hide();
+        }
+
+        protected void OnButton4Clicked(object sender, EventArgs e)
+        {
+        }
+
+        protected void OnBtnsalirlistClicked(object sender, EventArgs e)
+        {
+        }
+
+        protected void OnBtncancelarlistClicked(object sender, EventArgs e)
+        {
+           // new ProYectoX.Opciones();
+            // Hide();
         }
     }
 }

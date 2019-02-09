@@ -122,6 +122,7 @@ namespace ProYectoX
         }
 
 
+
         //       **********METODOS PARA DIALOGOS**********                                                                             ||
 
 

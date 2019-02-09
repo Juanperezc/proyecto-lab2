@@ -16,6 +16,8 @@ namespace ProYectoX
 
 		private global::Gtk.HBox hbox3;
 
+		private global::Gtk.Button btnsaliropciones;
+
 		private global::Gtk.Button btncan;
 
 		private global::Gtk.HBox hbox2;
@@ -81,21 +83,28 @@ namespace ProYectoX
 			this.hbox3.Name = "hbox3";
 			this.hbox3.Spacing = 6;
 			// Container child hbox3.Gtk.Box+BoxChild
+			this.btnsaliropciones = new global::Gtk.Button();
+			this.btnsaliropciones.CanFocus = true;
+			this.btnsaliropciones.Name = "btnsaliropciones";
+			this.btnsaliropciones.UseUnderline = true;
+			this.btnsaliropciones.Label = global::Mono.Unix.Catalog.GetString("Salir");
+			this.hbox3.Add(this.btnsaliropciones);
+			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.btnsaliropciones]));
+			w5.Position = 0;
+			// Container child hbox3.Gtk.Box+BoxChild
 			this.btncan = new global::Gtk.Button();
 			this.btncan.CanFocus = true;
 			this.btncan.Name = "btncan";
 			this.btncan.UseUnderline = true;
 			this.btncan.Label = global::Mono.Unix.Catalog.GetString("Cancelar");
 			this.hbox3.Add(this.btncan);
-			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.btncan]));
-			w5.Position = 2;
-			w5.Expand = false;
-			w5.Fill = false;
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.btncan]));
+			w6.Position = 1;
 			this.vbox3.Add(this.hbox3);
-			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.hbox3]));
-			w6.Position = 3;
-			w6.Expand = false;
-			w6.Fill = false;
+			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.hbox3]));
+			w7.Position = 3;
+			w7.Expand = false;
+			w7.Fill = false;
 			// Container child vbox3.Gtk.Box+BoxChild
 			this.hbox2 = new global::Gtk.HBox();
 			this.hbox2.Name = "hbox2";
@@ -106,10 +115,10 @@ namespace ProYectoX
 			this.lblfecha.Xpad = 143;
 			this.lblfecha.Xalign = 0F;
 			this.hbox2.Add(this.lblfecha);
-			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.lblfecha]));
-			w7.Position = 0;
-			w7.Expand = false;
-			w7.Fill = false;
+			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.lblfecha]));
+			w8.Position = 0;
+			w8.Expand = false;
+			w8.Fill = false;
 			// Container child hbox2.Gtk.Box+BoxChild
 			this.lblhora = new global::Gtk.Label();
 			this.lblhora.HeightRequest = 28;
@@ -117,25 +126,27 @@ namespace ProYectoX
 			this.lblhora.Xpad = 131;
 			this.lblhora.Xalign = 1F;
 			this.hbox2.Add(this.lblhora);
-			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.lblhora]));
-			w8.Position = 1;
-			w8.Expand = false;
-			w8.Fill = false;
-			this.vbox3.Add(this.hbox2);
-			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.hbox2]));
-			w9.Position = 4;
+			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.lblhora]));
+			w9.Position = 1;
 			w9.Expand = false;
 			w9.Fill = false;
+			this.vbox3.Add(this.hbox2);
+			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.hbox2]));
+			w10.Position = 4;
+			w10.Expand = false;
+			w10.Fill = false;
 			this.Add(this.vbox3);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 554;
-			this.DefaultHeight = 360;
+			this.DefaultHeight = 177;
 			this.Show();
 			this.btnactualizar.Clicked += new global::System.EventHandler(this.OnBtnactualizarClicked);
 			this.btnreportes.Clicked += new global::System.EventHandler(this.OnBtnreportesClicked);
+			this.btnsaliropciones.Clicked += new global::System.EventHandler(this.OnBtnsaliropcionesClicked);
+			this.btncan.Clicked += new global::System.EventHandler(this.OnBtncanClicked);
 		}
 	}
 }

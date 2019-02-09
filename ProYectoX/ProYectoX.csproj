@@ -49,7 +49,7 @@
     <Reference Include="Mono.Posix" />
     <Reference Include="System.Data" />
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\Drivers\Mysql\v4.5.2\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\Descargas\mysql-connector-net-6.9.12-noinstall\v4.0\MySql.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +83,16 @@
     <Compile Include="gtk-gui\ProYectoX.ListadoArchivos.cs" />
     <Compile Include="Masopciones.cs" />
     <Compile Include="gtk-gui\ProYectoX.Masopciones.cs" />
+    <Compile Include="ActualizarUsuario.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ActualizarUsuario.cs" />
+    <Compile Include="ActualizarEstudiante.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ActualizarEstudiante.cs" />
+    <Compile Include="ActualizarCursos.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ActualizarCursos.cs" />
+    <Compile Include="ActualizarGrupo.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ActualizarGrupo.cs" />
+    <Compile Include="ActualizarTurno.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ActualizarTurno.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
