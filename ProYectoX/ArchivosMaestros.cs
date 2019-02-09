@@ -27,7 +27,7 @@ namespace ProYectoX
 
         protected void OnBtnarchinstructorClicked(object sender, EventArgs e)
         {
-            ProYectoX.ListadoArchivos list = new ListadoArchivos();
+            ProYectoX.ListadoArchivos list = new ListadoArchivos("estudiantes");
             list.Show();
             Hide();
         }
