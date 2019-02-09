@@ -195,7 +195,6 @@ namespace ProYectoX
 			this.lblfecha.Ypad = 2;
 			this.lblfecha.Xalign = 0F;
 			this.lblfecha.Yalign = 0F;
-			this.lblfecha.LabelProp = "";
 			this.hbox4.Add(this.lblfecha);
 			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.lblfecha]));
 			w17.Position = 0;
@@ -208,7 +207,6 @@ namespace ProYectoX
 			this.lblhora.Ypad = 2;
 			this.lblhora.Xalign = 1F;
 			this.lblhora.Yalign = 0F;
-			this.lblhora.LabelProp = "";
 			this.hbox4.Add(this.lblhora);
 			global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.lblhora]));
 			w18.Position = 1;
