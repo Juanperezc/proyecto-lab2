@@ -38,8 +38,8 @@ public partial class MainWindow : Gtk.Window
                 string[] datos = cone.Listado(1, sent);
               
                 System.Console.WriteLine("Tipo de usuario :" + datos[0]);
-            
-                new ProYectoX.Opciones(Convert.ToInt16(datos[0])).Show();
+                ProYectoX.Validacioness.rol = Convert.ToInt16(datos[0]);
+                new ProYectoX.Opciones().Show();
 
                    this.Hide();
                     
@@ -50,6 +50,7 @@ public partial class MainWindow : Gtk.Window
             else
                 {
                  vl.DialogOK("INCORRECTO", "\nDisculpe, debe ingresar un usuario o contraseña válidos.", "WARNING");
+      
                  entusuario.IsFocus = true;
 
               }

@@ -15,26 +15,14 @@ namespace ProYectoX
             scb.Port = 3306;
             scb.UserID = "root";
             scb.Database = "proyectolabii";
-            scb.Password = "";
+            scb.Password = "2514182657";
             con = new MySqlConnection(scb.ConnectionString);
             Vn = nomvent;
 
         }
-
-
-        /*
-         * LO QUE HIZO SHELY
-        public string Cadenaconexion()
-        {
-            MySqlConnectionStringBuilder scb = new MySqlConnectionStringBuilder();
-            scb.Server = "localhost:3306";
-            scb.UserID = "root";
-            scb.Database = "damage";
-            scb.Password = "";
-            return scb.ConnectionString;
-        }*/
-
-
+        public MySqlConnection getConection(){
+            return con;
+        }
 
 
 
@@ -239,6 +227,39 @@ namespace ProYectoX
             }
             return c;
         }
+
+        //Hacer búsqueda de registros en una tabla
+        public MySqlDataReader ListadoGenerico(string sentencia)
+        {
+            //Crea arreglo de string que cargará con los datos leídos.
+            MySqlDataReader read = null;
+
+            //Abre la conexión.
+            if (Conectar() == true)
+            {
+                //Crea el comando MySql.
+                MySqlCommand cmd = new MySqlCommand(sentencia, con);
+                try
+                {
+                    //Crea y ejecuta el lector de datos.
+             
+                    read = cmd.ExecuteReader();
+                    //Cierra el lector
+                    read.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    Mensaje(ex.Message, ButtonsType.Ok, MessageType.Error, "Error");
+                }
+                finally
+                {
+                    cmd.Dispose();
+                    Desconectar();
+                }
+            }
+            return read;
+        }
+
         //Hacer búsqueda de registros en una tabla
         public string[] Listado(int p, string sentencia)
         {

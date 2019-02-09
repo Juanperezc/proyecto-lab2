@@ -389,9 +389,11 @@ namespace ProYectoX
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 972;
+			this.DefaultWidth = 424;
 			this.DefaultHeight = 534;
 			this.Show();
+			this.entbusqueda.Changed += new global::System.EventHandler(this.OnEntbusquedaChanged);
+			this.treeviewlistado.RowActivated += new global::Gtk.RowActivatedHandler(this.OnTreeviewlistadoRowActivated);
 			this.btncrear.Clicked += new global::System.EventHandler(this.OnBtncrearClicked);
 			this.btncancelarlist.Clicked += new global::System.EventHandler(this.OnBtncancelarlistClicked);
 		}

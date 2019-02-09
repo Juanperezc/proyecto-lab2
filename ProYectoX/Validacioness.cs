@@ -4,6 +4,10 @@ namespace ProYectoX
 {
     public class Validacioness
     {
+        //variables globales
+        public static int rol = 0;
+
+        ///
         public Validacioness()
         {
         }
@@ -97,7 +101,7 @@ namespace ProYectoX
                 if (cadena[x] >= 'A' && cadena[x] <= 'Z' || cadena[x] >= 'a' && cadena[x] <= 'z' || cadena[x] == ' ' || cadena[x] >= '0' && cadena[x] <= '9')
                 {
                 } //Similar al anterior, pero también incluye números naturales
-
+               
                 else
                     ent.Text = cadena.Substring(0, cadena.Length - 1);
             }

@@ -138,7 +138,6 @@
               <widget class="Gtk.Label" id="lblfecha">
                 <property name="MemberName" />
                 <property name="Xalign">0</property>
-                <property name="LabelProp" translatable="yes" />
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -152,7 +151,6 @@
                 <property name="MemberName" />
                 <property name="HeightRequest">28</property>
                 <property name="Xalign">1</property>
-                <property name="LabelProp" translatable="yes" />
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -279,7 +277,6 @@
                 <property name="MemberName" />
                 <property name="Xpad">143</property>
                 <property name="Xalign">0</property>
-                <property name="LabelProp" translatable="yes" />
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -294,7 +291,6 @@
                 <property name="HeightRequest">28</property>
                 <property name="Xpad">131</property>
                 <property name="Xalign">1</property>
-                <property name="LabelProp" translatable="yes" />
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -389,7 +385,6 @@
                 <property name="Ypad">2</property>
                 <property name="Xalign">0</property>
                 <property name="Yalign">0</property>
-                <property name="LabelProp" translatable="yes" />
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -405,7 +400,6 @@
                 <property name="Ypad">2</property>
                 <property name="Xalign">1</property>
                 <property name="Yalign">0</property>
-                <property name="LabelProp" translatable="yes" />
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -456,9 +450,8 @@
             <child>
               <widget class="Gtk.Label" id="lblfecha">
                 <property name="MemberName" />
-                <property name="Xalign">0</property>
-                <property name="LabelProp" translatable="yes" />
                 <property name="Xpad">44</property>
+                <property name="Xalign">0</property>
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -589,7 +582,6 @@
                 <property name="HeightRequest">28</property>
                 <property name="Xpad">55</property>
                 <property name="Xalign">1</property>
-                <property name="LabelProp" translatable="yes" />
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -811,7 +803,6 @@
                 <property name="Ypad">2</property>
                 <property name="Xalign">0</property>
                 <property name="Yalign">0</property>
-                <property name="LabelProp" translatable="yes" />
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -827,7 +818,6 @@
                 <property name="Ypad">2</property>
                 <property name="Xalign">1</property>
                 <property name="Yalign">0</property>
-                <property name="LabelProp" translatable="yes" />
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -1092,7 +1082,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="ProYectoX.ListadoArchivos" design-size="972 534">
+  <widget class="Gtk.Window" id="ProYectoX.ListadoArchivos" design-size="424 534">
     <property name="MemberName" />
     <property name="Title" translatable="yes">ListadoArchivos</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -1200,6 +1190,7 @@
                 <property name="CanFocus">True</property>
                 <property name="IsEditable">True</property>
                 <property name="InvisibleChar">●</property>
+                <signal name="Changed" handler="OnEntbusquedaChanged" />
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -1224,9 +1215,10 @@
                 <property name="ShadowType">In</property>
                 <child>
                   <widget class="Gtk.TreeView" id="treeviewlistado">
-                    <property name="MemberName" />
+                    <property name="MemberName">treeart</property>
                     <property name="CanFocus">True</property>
                     <property name="ShowScrollbars">True</property>
+                    <signal name="RowActivated" handler="OnTreeviewlistadoRowActivated" />
                   </widget>
                 </child>
               </widget>

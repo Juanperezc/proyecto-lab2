@@ -33,7 +33,8 @@ namespace ProYectoX
 
         protected void OnBtnestudianteClicked(object sender, EventArgs e)
         {
-            new ProYectoX.ListadoArchivos();
+            ListadoArchivos listarch = new ProYectoX.ListadoArchivos("estudiantes");
+            listarch.Show();
             Hide();
         }
     }

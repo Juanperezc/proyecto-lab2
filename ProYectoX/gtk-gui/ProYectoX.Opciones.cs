@@ -51,6 +51,8 @@ namespace ProYectoX
 			this.vbox3.Add(this.vbox2);
 			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.vbox2]));
 			w2.Position = 0;
+			w2.Expand = false;
+			w2.Fill = false;
 			// Container child vbox3.Gtk.Box+BoxChild
 			this.btnactualizar = new global::Gtk.Button();
 			this.btnactualizar.Sensitive = false;
@@ -62,7 +64,6 @@ namespace ProYectoX
 			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.btnactualizar]));
 			w3.Position = 1;
 			w3.Expand = false;
-			w3.Fill = false;
 			// Container child vbox3.Gtk.Box+BoxChild
 			this.btnreportes = new global::Gtk.Button();
 			this.btnreportes.Sensitive = false;
@@ -104,7 +105,6 @@ namespace ProYectoX
 			this.lblfecha.Name = "lblfecha";
 			this.lblfecha.Xpad = 143;
 			this.lblfecha.Xalign = 0F;
-			this.lblfecha.LabelProp = "";
 			this.hbox2.Add(this.lblfecha);
 			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.lblfecha]));
 			w7.Position = 0;
@@ -116,7 +116,6 @@ namespace ProYectoX
 			this.lblhora.Name = "lblhora";
 			this.lblhora.Xpad = 131;
 			this.lblhora.Xalign = 1F;
-			this.lblhora.LabelProp = "";
 			this.hbox2.Add(this.lblhora);
 			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.lblhora]));
 			w8.Position = 1;
@@ -132,9 +131,8 @@ namespace ProYectoX
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 586;
-			this.DefaultHeight = 371;
-			this.btnreportes.Hide();
+			this.DefaultWidth = 554;
+			this.DefaultHeight = 360;
 			this.Show();
 			this.btnactualizar.Clicked += new global::System.EventHandler(this.OnBtnactualizarClicked);
 			this.btnreportes.Clicked += new global::System.EventHandler(this.OnBtnreportesClicked);

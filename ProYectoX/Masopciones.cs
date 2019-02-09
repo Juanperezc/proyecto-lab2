@@ -15,7 +15,7 @@ namespace ProYectoX
 
         protected void OnBtncancelarmasopcClicked(object sender, EventArgs e)
         {
-            new ListadoArchivos();
+            new ListadoArchivos("estudiantes");
             Hide();
         }
     }

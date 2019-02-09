@@ -4,12 +4,13 @@ namespace ProYectoX
 {
     public partial class Opciones : Gtk.Window
     {ConectorBD conector;
-        public Opciones(int tipo): base(Gtk.WindowType.Toplevel)
+        public Opciones(): base(Gtk.WindowType.Toplevel)
         {
             this.Build();
             conector = new ConectorBD(this);
             ComenzarTimer();
-            Permisos(tipo);
+            Permisos(ProYectoX.Validacioness.rol);
+
         }
         protected void Permisos(int tipo)
         {
@@ -39,6 +40,7 @@ namespace ProYectoX
         protected void OnBtnreportesClicked(object sender, EventArgs e)
         {
             new ProYectoX.TiposReportes();
+ 
             this.Hide();
         }
 

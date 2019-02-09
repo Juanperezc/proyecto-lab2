@@ -132,7 +132,6 @@ public partial class MainWindow
 		this.lblfecha = new global::Gtk.Label();
 		this.lblfecha.Name = "lblfecha";
 		this.lblfecha.Xalign = 0F;
-		this.lblfecha.LabelProp = "";
 		this.hbox2.Add(this.lblfecha);
 		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.lblfecha]));
 		w10.Position = 0;
@@ -143,7 +142,6 @@ public partial class MainWindow
 		this.lblhora.HeightRequest = 28;
 		this.lblhora.Name = "lblhora";
 		this.lblhora.Xalign = 1F;
-		this.lblhora.LabelProp = "";
 		this.hbox2.Add(this.lblhora);
 		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.lblhora]));
 		w11.Position = 1;
