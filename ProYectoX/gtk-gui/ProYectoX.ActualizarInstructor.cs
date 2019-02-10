@@ -22,7 +22,7 @@ namespace ProYectoX
 
 		private global::Gtk.Label lbltelefonoinst;
 
-		private global::Gtk.Entry entry8;
+		private global::Gtk.Entry enttelefonoinst;
 
 		private global::Gtk.HBox hbox12;
 
@@ -34,9 +34,9 @@ namespace ProYectoX
 
 		private global::Gtk.HBox hbox17;
 
-		private global::Gtk.Label lblfechanacinst;
+		private global::Gtk.Label lblsexoinst;
 
-		private global::Gtk.Entry entfechanacinst;
+		private global::Gtk.ComboBox combobox2;
 
 		private global::Gtk.VBox vbox6;
 
@@ -50,9 +50,7 @@ namespace ProYectoX
 
 		private global::Gtk.HBox hbox20;
 
-		private global::Gtk.Label lblsexoinst;
-
-		private global::Gtk.ComboBox combobox2;
+		private global::Gtk.DrawingArea drawingarea5;
 
 		private global::Gtk.HBox hbox14;
 
@@ -62,27 +60,39 @@ namespace ProYectoX
 
 		private global::Gtk.Entry entdireccioninst;
 
-		private global::Gtk.DrawingArea drawingarea3;
+		private global::Gtk.Label lblfechanacinst;
 
 		private global::Gtk.HBox hbox22;
 
-		private global::Gtk.Button btnguardar;
+		private global::Gtk.DrawingArea drawingarea6;
 
-		private global::Gtk.Button btncancelaractusu;
+		private global::Gtk.Calendar calendar5;
 
 		private global::Gtk.VBox vbox7;
 
 		private global::Gtk.HBox hbox23;
 
-		private global::Gtk.DrawingArea drawingarea5;
+		private global::Gtk.DrawingArea drawingarea4;
 
 		private global::Gtk.HBox hbox24;
+
+		private global::Gtk.Button btnguardar;
+
+		private global::Gtk.Button btncancelaractinst;
+
+		private global::Gtk.DrawingArea drawingarea3;
+
+		private global::Gtk.HBox hbox2;
+
+		private global::Gtk.DrawingArea drawingarea8;
+
+		private global::Gtk.HBox hbox3;
 
 		private global::Gtk.Label lblfecha;
 
 		private global::Gtk.Label lblhora;
 
-		private global::Gtk.DrawingArea drawingarea4;
+		private global::Gtk.DrawingArea drawingarea7;
 
 		protected virtual void Build()
 		{
@@ -152,13 +162,13 @@ namespace ProYectoX
 			w5.Expand = false;
 			w5.Fill = false;
 			// Container child hbox16.Gtk.Box+BoxChild
-			this.entry8 = new global::Gtk.Entry();
-			this.entry8.CanFocus = true;
-			this.entry8.Name = "entry8";
-			this.entry8.IsEditable = true;
-			this.entry8.InvisibleChar = '●';
-			this.hbox16.Add(this.entry8);
-			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox16[this.entry8]));
+			this.enttelefonoinst = new global::Gtk.Entry();
+			this.enttelefonoinst.CanFocus = true;
+			this.enttelefonoinst.Name = "enttelefonoinst";
+			this.enttelefonoinst.IsEditable = true;
+			this.enttelefonoinst.InvisibleChar = '●';
+			this.hbox16.Add(this.enttelefonoinst);
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox16[this.enttelefonoinst]));
 			w6.Position = 1;
 			this.hbox11.Add(this.hbox16);
 			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox11[this.hbox16]));
@@ -203,27 +213,29 @@ namespace ProYectoX
 			this.hbox17.Name = "hbox17";
 			this.hbox17.Spacing = 6;
 			// Container child hbox17.Gtk.Box+BoxChild
-			this.lblfechanacinst = new global::Gtk.Label();
-			this.lblfechanacinst.Name = "lblfechanacinst";
-			this.lblfechanacinst.LabelProp = global::Mono.Unix.Catalog.GetString("Fecha de nacimiento");
-			this.hbox17.Add(this.lblfechanacinst);
-			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox17[this.lblfechanacinst]));
+			this.lblsexoinst = new global::Gtk.Label();
+			this.lblsexoinst.Name = "lblsexoinst";
+			this.lblsexoinst.LabelProp = global::Mono.Unix.Catalog.GetString("Sexo");
+			this.hbox17.Add(this.lblsexoinst);
+			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox17[this.lblsexoinst]));
 			w12.Position = 0;
 			w12.Expand = false;
 			w12.Fill = false;
 			// Container child hbox17.Gtk.Box+BoxChild
-			this.entfechanacinst = new global::Gtk.Entry();
-			this.entfechanacinst.CanFocus = true;
-			this.entfechanacinst.Name = "entfechanacinst";
-			this.entfechanacinst.IsEditable = true;
-			this.entfechanacinst.InvisibleChar = '●';
-			this.entfechanacinst.Xalign = 1F;
-			this.hbox17.Add(this.entfechanacinst);
-			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox17[this.entfechanacinst]));
+			this.combobox2 = global::Gtk.ComboBox.NewText();
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("F"));
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("M"));
+			this.combobox2.Name = "combobox2";
+			this.hbox17.Add(this.combobox2);
+			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox17[this.combobox2]));
 			w13.Position = 1;
+			w13.Expand = false;
+			w13.Fill = false;
 			this.hbox12.Add(this.hbox17);
 			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hbox12[this.hbox17]));
 			w14.Position = 1;
+			w14.Expand = false;
+			w14.Fill = false;
 			this.vbox8.Add(this.hbox12);
 			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.vbox8[this.hbox12]));
 			w15.Position = 2;
@@ -273,34 +285,19 @@ namespace ProYectoX
 			this.hbox20.Name = "hbox20";
 			this.hbox20.Spacing = 6;
 			// Container child hbox20.Gtk.Box+BoxChild
-			this.lblsexoinst = new global::Gtk.Label();
-			this.lblsexoinst.Name = "lblsexoinst";
-			this.lblsexoinst.LabelProp = global::Mono.Unix.Catalog.GetString("Sexo");
-			this.hbox20.Add(this.lblsexoinst);
-			global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.hbox20[this.lblsexoinst]));
+			this.drawingarea5 = new global::Gtk.DrawingArea();
+			this.drawingarea5.Name = "drawingarea5";
+			this.hbox20.Add(this.drawingarea5);
+			global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.hbox20[this.drawingarea5]));
 			w20.Position = 0;
-			w20.Expand = false;
-			w20.Fill = false;
-			// Container child hbox20.Gtk.Box+BoxChild
-			this.combobox2 = global::Gtk.ComboBox.NewText();
-			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("F"));
-			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("M"));
-			this.combobox2.Name = "combobox2";
-			this.hbox20.Add(this.combobox2);
-			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.hbox20[this.combobox2]));
-			w21.Position = 1;
-			w21.Expand = false;
-			w21.Fill = false;
 			this.hbox13.Add(this.hbox20);
-			global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.hbox13[this.hbox20]));
-			w22.Position = 1;
+			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.hbox13[this.hbox20]));
+			w21.Position = 1;
+			this.vbox6.Add(this.hbox13);
+			global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.vbox6[this.hbox13]));
+			w22.Position = 0;
 			w22.Expand = false;
 			w22.Fill = false;
-			this.vbox6.Add(this.hbox13);
-			global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.vbox6[this.hbox13]));
-			w23.Position = 0;
-			w23.Expand = false;
-			w23.Fill = false;
 			// Container child vbox6.Gtk.Box+BoxChild
 			this.hbox14 = new global::Gtk.HBox();
 			this.hbox14.Name = "hbox14";
@@ -314,10 +311,10 @@ namespace ProYectoX
 			this.lbldireccioninst.Name = "lbldireccioninst";
 			this.lbldireccioninst.LabelProp = global::Mono.Unix.Catalog.GetString("Direccion");
 			this.hbox21.Add(this.lbldireccioninst);
-			global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.hbox21[this.lbldireccioninst]));
-			w24.Position = 0;
-			w24.Expand = false;
-			w24.Fill = false;
+			global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.hbox21[this.lbldireccioninst]));
+			w23.Position = 0;
+			w23.Expand = false;
+			w23.Fill = false;
 			// Container child hbox21.Gtk.Box+BoxChild
 			this.entdireccioninst = new global::Gtk.Entry();
 			this.entdireccioninst.CanFocus = true;
@@ -325,55 +322,56 @@ namespace ProYectoX
 			this.entdireccioninst.IsEditable = true;
 			this.entdireccioninst.InvisibleChar = '●';
 			this.hbox21.Add(this.entdireccioninst);
-			global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.hbox21[this.entdireccioninst]));
-			w25.Position = 1;
-			w25.Expand = false;
+			global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.hbox21[this.entdireccioninst]));
+			w24.Position = 1;
+			w24.Expand = false;
 			this.hbox14.Add(this.hbox21);
-			global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.hbox14[this.hbox21]));
-			w26.Position = 0;
+			global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.hbox14[this.hbox21]));
+			w25.Position = 0;
 			// Container child hbox14.Gtk.Box+BoxChild
-			this.drawingarea3 = new global::Gtk.DrawingArea();
-			this.drawingarea3.Name = "drawingarea3";
-			this.hbox14.Add(this.drawingarea3);
-			global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.hbox14[this.drawingarea3]));
-			w27.Position = 1;
+			this.lblfechanacinst = new global::Gtk.Label();
+			this.lblfechanacinst.Name = "lblfechanacinst";
+			this.lblfechanacinst.LabelProp = global::Mono.Unix.Catalog.GetString("Fecha de nacimiento");
+			this.hbox14.Add(this.lblfechanacinst);
+			global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.hbox14[this.lblfechanacinst]));
+			w26.Position = 1;
+			w26.Expand = false;
+			w26.Fill = false;
 			this.vbox6.Add(this.hbox14);
-			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.vbox6[this.hbox14]));
-			w28.Position = 1;
-			w28.Expand = false;
-			w28.Fill = false;
+			global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.vbox6[this.hbox14]));
+			w27.Position = 1;
+			w27.Expand = false;
+			w27.Fill = false;
 			// Container child vbox6.Gtk.Box+BoxChild
 			this.hbox22 = new global::Gtk.HBox();
 			this.hbox22.Name = "hbox22";
 			this.hbox22.Spacing = 6;
 			// Container child hbox22.Gtk.Box+BoxChild
-			this.btnguardar = new global::Gtk.Button();
-			this.btnguardar.CanFocus = true;
-			this.btnguardar.Name = "btnguardar";
-			this.btnguardar.UseUnderline = true;
-			this.btnguardar.Label = global::Mono.Unix.Catalog.GetString("Guardar");
-			this.hbox22.Add(this.btnguardar);
-			global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.hbox22[this.btnguardar]));
-			w29.Position = 0;
+			this.drawingarea6 = new global::Gtk.DrawingArea();
+			this.drawingarea6.Name = "drawingarea6";
+			this.hbox22.Add(this.drawingarea6);
+			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.hbox22[this.drawingarea6]));
+			w28.Position = 0;
 			// Container child hbox22.Gtk.Box+BoxChild
-			this.btncancelaractusu = new global::Gtk.Button();
-			this.btncancelaractusu.CanFocus = true;
-			this.btncancelaractusu.Name = "btncancelaractusu";
-			this.btncancelaractusu.UseUnderline = true;
-			this.btncancelaractusu.Label = global::Mono.Unix.Catalog.GetString("Cancelar");
-			this.hbox22.Add(this.btncancelaractusu);
-			global::Gtk.Box.BoxChild w30 = ((global::Gtk.Box.BoxChild)(this.hbox22[this.btncancelaractusu]));
-			w30.Position = 1;
+			this.calendar5 = new global::Gtk.Calendar();
+			this.calendar5.CanFocus = true;
+			this.calendar5.Name = "calendar5";
+			this.calendar5.DisplayOptions = ((global::Gtk.CalendarDisplayOptions)(35));
+			this.hbox22.Add(this.calendar5);
+			global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.hbox22[this.calendar5]));
+			w29.Position = 1;
+			w29.Expand = false;
+			w29.Fill = false;
 			this.vbox6.Add(this.hbox22);
-			global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.vbox6[this.hbox22]));
-			w31.Position = 2;
+			global::Gtk.Box.BoxChild w30 = ((global::Gtk.Box.BoxChild)(this.vbox6[this.hbox22]));
+			w30.Position = 2;
+			w30.Expand = false;
+			w30.Fill = false;
+			this.vbox5.Add(this.vbox6);
+			global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.vbox6]));
+			w31.Position = 1;
 			w31.Expand = false;
 			w31.Fill = false;
-			this.vbox5.Add(this.vbox6);
-			global::Gtk.Box.BoxChild w32 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.vbox6]));
-			w32.Position = 1;
-			w32.Expand = false;
-			w32.Fill = false;
 			// Container child vbox5.Gtk.Box+BoxChild
 			this.vbox7 = new global::Gtk.VBox();
 			this.vbox7.Name = "vbox7";
@@ -383,68 +381,118 @@ namespace ProYectoX
 			this.hbox23.Name = "hbox23";
 			this.hbox23.Spacing = 6;
 			// Container child hbox23.Gtk.Box+BoxChild
-			this.drawingarea5 = new global::Gtk.DrawingArea();
-			this.drawingarea5.Name = "drawingarea5";
-			this.hbox23.Add(this.drawingarea5);
-			global::Gtk.Box.BoxChild w33 = ((global::Gtk.Box.BoxChild)(this.hbox23[this.drawingarea5]));
-			w33.Position = 0;
+			this.drawingarea4 = new global::Gtk.DrawingArea();
+			this.drawingarea4.Name = "drawingarea4";
+			this.hbox23.Add(this.drawingarea4);
+			global::Gtk.Box.BoxChild w32 = ((global::Gtk.Box.BoxChild)(this.hbox23[this.drawingarea4]));
+			w32.Position = 0;
 			// Container child hbox23.Gtk.Box+BoxChild
 			this.hbox24 = new global::Gtk.HBox();
 			this.hbox24.Name = "hbox24";
 			this.hbox24.Spacing = 6;
 			// Container child hbox24.Gtk.Box+BoxChild
+			this.btnguardar = new global::Gtk.Button();
+			this.btnguardar.CanFocus = true;
+			this.btnguardar.Name = "btnguardar";
+			this.btnguardar.UseUnderline = true;
+			this.btnguardar.Label = global::Mono.Unix.Catalog.GetString("Guardar");
+			this.hbox24.Add(this.btnguardar);
+			global::Gtk.Box.BoxChild w33 = ((global::Gtk.Box.BoxChild)(this.hbox24[this.btnguardar]));
+			w33.Position = 0;
+			w33.Fill = false;
+			// Container child hbox24.Gtk.Box+BoxChild
+			this.btncancelaractinst = new global::Gtk.Button();
+			this.btncancelaractinst.CanFocus = true;
+			this.btncancelaractinst.Name = "btncancelaractinst";
+			this.btncancelaractinst.UseUnderline = true;
+			this.btncancelaractinst.Label = global::Mono.Unix.Catalog.GetString("Cancelar");
+			this.hbox24.Add(this.btncancelaractinst);
+			global::Gtk.Box.BoxChild w34 = ((global::Gtk.Box.BoxChild)(this.hbox24[this.btncancelaractinst]));
+			w34.Position = 1;
+			this.hbox23.Add(this.hbox24);
+			global::Gtk.Box.BoxChild w35 = ((global::Gtk.Box.BoxChild)(this.hbox23[this.hbox24]));
+			w35.Position = 1;
+			w35.Expand = false;
+			w35.Fill = false;
+			// Container child hbox23.Gtk.Box+BoxChild
+			this.drawingarea3 = new global::Gtk.DrawingArea();
+			this.drawingarea3.Name = "drawingarea3";
+			this.hbox23.Add(this.drawingarea3);
+			global::Gtk.Box.BoxChild w36 = ((global::Gtk.Box.BoxChild)(this.hbox23[this.drawingarea3]));
+			w36.Position = 2;
+			this.vbox7.Add(this.hbox23);
+			global::Gtk.Box.BoxChild w37 = ((global::Gtk.Box.BoxChild)(this.vbox7[this.hbox23]));
+			w37.Position = 0;
+			w37.Expand = false;
+			w37.Fill = false;
+			// Container child vbox7.Gtk.Box+BoxChild
+			this.hbox2 = new global::Gtk.HBox();
+			this.hbox2.Name = "hbox2";
+			this.hbox2.Spacing = 6;
+			// Container child hbox2.Gtk.Box+BoxChild
+			this.drawingarea8 = new global::Gtk.DrawingArea();
+			this.drawingarea8.Name = "drawingarea8";
+			this.hbox2.Add(this.drawingarea8);
+			global::Gtk.Box.BoxChild w38 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.drawingarea8]));
+			w38.Position = 0;
+			// Container child hbox2.Gtk.Box+BoxChild
+			this.hbox3 = new global::Gtk.HBox();
+			this.hbox3.Name = "hbox3";
+			this.hbox3.Spacing = 6;
+			// Container child hbox3.Gtk.Box+BoxChild
 			this.lblfecha = new global::Gtk.Label();
 			this.lblfecha.Name = "lblfecha";
 			this.lblfecha.Xpad = 96;
 			this.lblfecha.Ypad = 2;
 			this.lblfecha.Xalign = 0F;
 			this.lblfecha.Yalign = 0F;
-			this.hbox24.Add(this.lblfecha);
-			global::Gtk.Box.BoxChild w34 = ((global::Gtk.Box.BoxChild)(this.hbox24[this.lblfecha]));
-			w34.Position = 0;
-			w34.Expand = false;
-			w34.Fill = false;
-			// Container child hbox24.Gtk.Box+BoxChild
+			this.hbox3.Add(this.lblfecha);
+			global::Gtk.Box.BoxChild w39 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.lblfecha]));
+			w39.Position = 0;
+			w39.Expand = false;
+			w39.Fill = false;
+			// Container child hbox3.Gtk.Box+BoxChild
 			this.lblhora = new global::Gtk.Label();
 			this.lblhora.Name = "lblhora";
 			this.lblhora.Xpad = 87;
 			this.lblhora.Ypad = 2;
 			this.lblhora.Xalign = 1F;
 			this.lblhora.Yalign = 0F;
-			this.hbox24.Add(this.lblhora);
-			global::Gtk.Box.BoxChild w35 = ((global::Gtk.Box.BoxChild)(this.hbox24[this.lblhora]));
-			w35.Position = 1;
-			w35.Expand = false;
-			w35.Fill = false;
-			this.hbox23.Add(this.hbox24);
-			global::Gtk.Box.BoxChild w36 = ((global::Gtk.Box.BoxChild)(this.hbox23[this.hbox24]));
-			w36.Position = 1;
-			w36.Expand = false;
-			w36.Fill = false;
-			// Container child hbox23.Gtk.Box+BoxChild
-			this.drawingarea4 = new global::Gtk.DrawingArea();
-			this.drawingarea4.Name = "drawingarea4";
-			this.hbox23.Add(this.drawingarea4);
-			global::Gtk.Box.BoxChild w37 = ((global::Gtk.Box.BoxChild)(this.hbox23[this.drawingarea4]));
-			w37.Position = 2;
-			this.vbox7.Add(this.hbox23);
-			global::Gtk.Box.BoxChild w38 = ((global::Gtk.Box.BoxChild)(this.vbox7[this.hbox23]));
-			w38.Position = 0;
-			w38.Expand = false;
-			w38.Fill = false;
+			this.hbox3.Add(this.lblhora);
+			global::Gtk.Box.BoxChild w40 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.lblhora]));
+			w40.Position = 1;
+			w40.Expand = false;
+			w40.Fill = false;
+			this.hbox2.Add(this.hbox3);
+			global::Gtk.Box.BoxChild w41 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.hbox3]));
+			w41.Position = 1;
+			w41.Expand = false;
+			w41.Fill = false;
+			// Container child hbox2.Gtk.Box+BoxChild
+			this.drawingarea7 = new global::Gtk.DrawingArea();
+			this.drawingarea7.Name = "drawingarea7";
+			this.hbox2.Add(this.drawingarea7);
+			global::Gtk.Box.BoxChild w42 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.drawingarea7]));
+			w42.Position = 2;
+			this.vbox7.Add(this.hbox2);
+			global::Gtk.Box.BoxChild w43 = ((global::Gtk.Box.BoxChild)(this.vbox7[this.hbox2]));
+			w43.Position = 1;
+			w43.Expand = false;
+			w43.Fill = false;
 			this.vbox5.Add(this.vbox7);
-			global::Gtk.Box.BoxChild w39 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.vbox7]));
-			w39.Position = 2;
-			w39.Expand = false;
-			w39.Fill = false;
+			global::Gtk.Box.BoxChild w44 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.vbox7]));
+			w44.Position = 2;
+			w44.Expand = false;
+			w44.Fill = false;
 			this.Add(this.vbox5);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 533;
-			this.DefaultHeight = 250;
+			this.DefaultHeight = 389;
 			this.Show();
+			this.btncancelaractinst.Clicked += new global::System.EventHandler(this.OnBtncancelaractusuClicked);
 		}
 	}
 }

@@ -28,18 +28,6 @@ namespace ProYectoX
 
 		private global::Gtk.Button btncancelaractusu;
 
-		private global::Gtk.HBox hbox29;
-
-		private global::Gtk.DrawingArea drawingarea7;
-
-		private global::Gtk.HBox hbox30;
-
-		private global::Gtk.Label lblfecha;
-
-		private global::Gtk.Label lblhora;
-
-		private global::Gtk.DrawingArea drawingarea6;
-
 		protected virtual void Build()
 		{
 			global::Stetic.Gui.Initialize(this);
@@ -148,60 +136,6 @@ namespace ProYectoX
 			w11.Position = 3;
 			w11.Expand = false;
 			w11.Fill = false;
-			// Container child vbox9.Gtk.Box+BoxChild
-			this.hbox29 = new global::Gtk.HBox();
-			this.hbox29.Name = "hbox29";
-			this.hbox29.Spacing = 6;
-			// Container child hbox29.Gtk.Box+BoxChild
-			this.drawingarea7 = new global::Gtk.DrawingArea();
-			this.drawingarea7.Name = "drawingarea7";
-			this.hbox29.Add(this.drawingarea7);
-			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox29[this.drawingarea7]));
-			w12.Position = 0;
-			// Container child hbox29.Gtk.Box+BoxChild
-			this.hbox30 = new global::Gtk.HBox();
-			this.hbox30.Name = "hbox30";
-			this.hbox30.Spacing = 6;
-			// Container child hbox30.Gtk.Box+BoxChild
-			this.lblfecha = new global::Gtk.Label();
-			this.lblfecha.Name = "lblfecha";
-			this.lblfecha.Xpad = 96;
-			this.lblfecha.Ypad = 2;
-			this.lblfecha.Xalign = 0F;
-			this.lblfecha.Yalign = 0F;
-			this.hbox30.Add(this.lblfecha);
-			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox30[this.lblfecha]));
-			w13.Position = 0;
-			w13.Expand = false;
-			w13.Fill = false;
-			// Container child hbox30.Gtk.Box+BoxChild
-			this.lblhora = new global::Gtk.Label();
-			this.lblhora.Name = "lblhora";
-			this.lblhora.Xpad = 87;
-			this.lblhora.Ypad = 2;
-			this.lblhora.Xalign = 1F;
-			this.lblhora.Yalign = 0F;
-			this.hbox30.Add(this.lblhora);
-			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hbox30[this.lblhora]));
-			w14.Position = 1;
-			w14.Expand = false;
-			w14.Fill = false;
-			this.hbox29.Add(this.hbox30);
-			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hbox29[this.hbox30]));
-			w15.Position = 1;
-			w15.Expand = false;
-			w15.Fill = false;
-			// Container child hbox29.Gtk.Box+BoxChild
-			this.drawingarea6 = new global::Gtk.DrawingArea();
-			this.drawingarea6.Name = "drawingarea6";
-			this.hbox29.Add(this.drawingarea6);
-			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox29[this.drawingarea6]));
-			w16.Position = 2;
-			this.vbox9.Add(this.hbox29);
-			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.vbox9[this.hbox29]));
-			w17.Position = 4;
-			w17.Expand = false;
-			w17.Fill = false;
 			this.Add(this.vbox9);
 			if ((this.Child != null))
 			{
@@ -210,6 +144,7 @@ namespace ProYectoX
 			this.DefaultWidth = 404;
 			this.DefaultHeight = 163;
 			this.Show();
+			this.entcodcurso.Changed += new global::System.EventHandler(this.OnEntcodcursoChanged);
 			this.entdescripcioncurso.Changed += new global::System.EventHandler(this.OnEntdescripcioncursoChanged);
 			this.btnguardar.Clicked += new global::System.EventHandler(this.OnBtnguardarClicked);
 			this.btncancelaractusu.Clicked += new global::System.EventHandler(this.OnBtncancelaractusuClicked);

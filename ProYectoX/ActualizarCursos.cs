@@ -12,7 +12,7 @@ namespace ProYectoX
         int tipo;
         int id;
         ProYectoX.ConectorBD cone;
-    
+
         public ActualizarCursos(int tip, int id = 0):
                 base(Gtk.WindowType.Toplevel)
         {
@@ -24,6 +24,7 @@ namespace ProYectoX
             cone = new ProYectoX.ConectorBD(this);
             iniciar();
 
+   
         }
         public void iniciar(){
             if (this.tipo == 1){
@@ -76,11 +77,20 @@ namespace ProYectoX
                 cone.EjecutarSentencia("UPDATE cursos SET descripcion='" + entdescripcioncurso.Text + "' WHERE id ='" + this.id + "'");
                 val.DialogOK("EXITO", "El registro se ha guardado correctamente", "info");
                 //editar
+      
 
             }
            
 
         }
+        public void guardarcursos()
+        {
+            if (entcodcurso.Text == "" || entdescripcioncurso.Text == "")
+            { val.DialogOK("AVISO", "\nDisculpe, debe llenar todos los campos.", "WARNING"); }
+
+            else{}
+        }
+     
         protected void OnBtncancelaractusuClicked(object sender, EventArgs e)
         {
             Hide();
@@ -91,6 +101,11 @@ namespace ProYectoX
         protected void OnEntdescripcioncursoChanged(object sender, EventArgs e)
         {
             val.ValidarLetras(entdescripcioncurso);
+        }
+
+        protected void OnEntcodcursoChanged(object sender, EventArgs e)
+        {
+            val.ValidarAlfanum(entcodcurso);
         }
     }
 }

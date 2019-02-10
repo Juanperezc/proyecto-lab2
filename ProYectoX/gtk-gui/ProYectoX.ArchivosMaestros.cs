@@ -75,7 +75,6 @@ namespace ProYectoX
 			w2.Fill = false;
 			// Container child vbox4.Gtk.Box+BoxChild
 			this.hbox1 = new global::Gtk.HBox();
-			this.hbox1.Name = "hbox1";
 			this.hbox1.Spacing = 6;
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.btnusuario = new global::Gtk.Button();
@@ -109,6 +108,8 @@ namespace ProYectoX
 			this.btnestudiante.CanFocus = true;
 			this.btnestudiante.Name = "btnestudiante";
 			this.btnestudiante.UseUnderline = true;
+			this.btnestudiante.Xalign = 0F;
+			this.btnestudiante.Yalign = 0F;
 			this.btnestudiante.Label = global::Mono.Unix.Catalog.GetString("Estudiante");
 			this.hbox3.Add(this.btnestudiante);
 			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.btnestudiante]));
@@ -118,6 +119,8 @@ namespace ProYectoX
 			this.btncurso.CanFocus = true;
 			this.btncurso.Name = "btncurso";
 			this.btncurso.UseUnderline = true;
+			this.btncurso.Xalign = 1F;
+			this.btncurso.Yalign = 0F;
 			this.btncurso.Label = global::Mono.Unix.Catalog.GetString("Curso");
 			this.hbox3.Add(this.btncurso);
 			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.btncurso]));
@@ -136,6 +139,7 @@ namespace ProYectoX
 			this.btngrupo.CanFocus = true;
 			this.btngrupo.Name = "btngrupo";
 			this.btngrupo.UseUnderline = true;
+			this.btngrupo.Xalign = 0F;
 			this.btngrupo.Label = global::Mono.Unix.Catalog.GetString("Grupo");
 			this.hbox4.Add(this.btngrupo);
 			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.btngrupo]));
@@ -228,6 +232,7 @@ namespace ProYectoX
 			w18.Fill = false;
 			// Container child hbox5.Gtk.Box+BoxChild
 			this.drawingarea1 = new global::Gtk.DrawingArea();
+			this.drawingarea1.HeightRequest = 28;
 			this.drawingarea1.Name = "drawingarea1";
 			this.hbox5.Add(this.drawingarea1);
 			global::Gtk.Box.BoxChild w19 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.drawingarea1]));
