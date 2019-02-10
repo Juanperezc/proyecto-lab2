@@ -12,7 +12,25 @@ namespace ProYectoX
         {
         }
         //  ************PARA ADMITIR SOLO CARACTERES NUMERICOS***********                                                        
+        public int[] RemoveIndices(int[] IndicesArray, int RemoveAt)
+        {
+            int[] newIndicesArray = new int[IndicesArray.Length - 1];
 
+            int i = 0;
+            int j = 0;
+            while (i < IndicesArray.Length)
+            {
+                if (i != RemoveAt)
+                {
+                    newIndicesArray[j] = IndicesArray[i];
+                    j++;
+                }
+
+                i++;
+            }
+
+            return newIndicesArray;
+        }
         public void ValidarNum(Entry ent)
         {
             string cadena = ent.Text;
@@ -223,6 +241,18 @@ namespace ProYectoX
             }
             return response;
         }
-    
+
+        public int searchArrayPosition(int[] arr, int value){
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == value)
+                {
+                    return i;
+                }
+            }
+            return  - 1;
+        }
+       
+
     }
 }

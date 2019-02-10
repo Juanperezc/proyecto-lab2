@@ -299,7 +299,7 @@ namespace ProYectoX
                 while (rea.Read())
                 {
 
-                    list.AppendValues((int)rea["id"], rea["estatus"].ToString(), rea["cedula"].ToString(), rea["nombres"].ToString(), rea["apeillidos"].ToString(),
+                    list.AppendValues((int)rea["id"], rea["estatus"].ToString(), rea["cedula"].ToString(), rea["nombres"].ToString(), rea["apellidos"].ToString(),
                                       rea["direccion"].ToString(), rea["telefono"].ToString());
 
                 }
@@ -333,7 +333,7 @@ namespace ProYectoX
                     MySqlDataReader rea = cmd.ExecuteReader();
                     while (rea.Read())
                     {
-                        list.AppendValues((int)rea["id"], rea["estatus"].ToString(), rea["cedula"].ToString(), rea["nombres"].ToString(), rea["apeillidos"].ToString(),
+                        list.AppendValues((int)rea["id"], rea["estatus"].ToString(), rea["cedula"].ToString(), rea["nombres"].ToString(), rea["apellidos"].ToString(),
                                           rea["direccion"].ToString(), rea["telefono"].ToString());
 
                     }
@@ -437,7 +437,7 @@ namespace ProYectoX
 
 
             MySqlConnection con = this.cone.getConection();
-            MySqlCommand cmd = new MySqlCommand("SELECT g.id, g.cod_grupo, g.fecha_inicio, g.fecha_fin, i.nombres, c.descripcion, t.descripcion as turno " +
+            MySqlCommand cmd = new MySqlCommand("SELECT g.id, g.cod_grupo, g.fecha_inicio, g.fecha_fin, i.nombres, c.descripcion, t.descripcion as turno, g.estatus " +
                                                 "FROM grupos as g JOIN cursos as c ON g.curso_id = c.id " +
                                                 "JOIN instructores as i ON g.instructor_id = i.id JOIN turnos as t ON g.turno_id = t.id", con);
 
@@ -472,7 +472,7 @@ namespace ProYectoX
                                                 typeof(string));
             using (MySqlConnection con = this.cone.getConection())
             {
-                MySqlCommand cmd = new MySqlCommand("SELECT g.id, g.cod_grupo, g.fecha_inicio, g.fecha_fin, i.nombres, c.descripcion, t.descripcion as turno " +
+                MySqlCommand cmd = new MySqlCommand("SELECT g.id, g.cod_grupo, g.fecha_inicio, g.fecha_fin, i.nombres, c.descripcion, t.descripcion as turno, g.estatus " +
                                               "FROM grupos as g JOIN cursos as c ON g.curso_id = c.id " +
                                               "JOIN instructores as i ON g.instructor_id = i.id JOIN turnos as t ON g.turno_id = t.id" +
                                                     " WHERE cod_grupo LIKE '%" + cod + "%'", con);
@@ -599,45 +599,7 @@ namespace ProYectoX
         protected void OnTreeviewlistadoRowActivated(object o, RowActivatedArgs args)
         {
 
-            switch (tipo.ToString())
-            {
-                case "estudiantes":
-                    {
-                        System.Console.WriteLine("test estudiantes");
-                        treeviewlistado.Model = estudiantecod(entbusqueda.Text.Trim());
-                        break;
-                    }
-                case "usuarios":
-                    {
-                        System.Console.WriteLine("test usuarios");
-                        treeviewlistado.Model = usuarioscod(entbusqueda.Text.Trim());
-                        break;
-                    }
-                case "cursos":
-                    {
-                        treeviewlistado.Model = cursoscod(entbusqueda.Text.Trim());
-                        break;
-
-                    }
-
-                case "grupos":
-                    {
-                        treeviewlistado.Model = gruposcod(entbusqueda.Text.Trim());
-                        break;
-                    }
-                case "turnos":
-                    {
-
-                        treeviewlistado.Model = turnoscod(entbusqueda.Text.Trim());
-                        break;
-                    }
-                case "instructores":
-                    {
-
-                        treeviewlistado.Model = instructorescod(entbusqueda.Text.Trim());
-                        break;
-                    }
-            }
+           
 
             var model = treeviewlistado.Model;
             TreeIter iter;

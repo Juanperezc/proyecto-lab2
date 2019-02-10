@@ -7,6 +7,7 @@ namespace ProYectoX
     public class ConectorBD
     {
         private MySqlConnection con;
+        public MySqlCommand cmd; //comando
         Window Vn;
         public ConectorBD(Window nomvent)
         {
@@ -15,7 +16,7 @@ namespace ProYectoX
             scb.Port = 3306;
             scb.UserID = "root";
             scb.Database = "proyectolabii";
-            scb.Password = "";
+            scb.Password = "2514182657";
             con = new MySqlConnection(scb.ConnectionString);
             Vn = nomvent;
 
@@ -332,6 +333,45 @@ namespace ProYectoX
             }
             return array;
         }
+        //Hacer búsqueda de registros en una tabla
+        public int[] ListadoInt(int p, string sentencia)
+        {
+            //Crea arreglo de string que cargará con los datos leídos.
+            int[] array = new int[p];
+
+            //Abre la conexión.
+            if (Conectar() == true)
+            {
+                //Crea el comando MySql.
+                MySqlCommand cmd = new MySqlCommand(sentencia, con);
+                try
+                {
+                    //Crea y ejecuta el lector de datos.
+                    MySqlDataReader read;
+                    read = cmd.ExecuteReader();
+
+                    while (read.Read())
+                    {
+
+                        //Cargar el arreglo con los datos leídos
+                        for (int i = 0; i < p; i++)
+                            array[i] = (int)read[i];
+                    }
+                    //Cierra el lector
+                    read.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    Mensaje(ex.Message, ButtonsType.Ok, MessageType.Error, "Error");
+                }
+                finally
+                {
+                    cmd.Dispose();
+                    Desconectar();
+                }
+            }
+            return array;
+        }
         public string[] ListadoMD(int i, int j, string sentencia)
         {
             int nelem = i * j;
@@ -386,6 +426,7 @@ namespace ProYectoX
                 try
                 {
                     //Ejecuta el comando.
+                  
                     escalar = cmd.ExecuteScalar().ToString();
                 }
                 catch (MySqlException ex)
@@ -401,6 +442,26 @@ namespace ProYectoX
 
             return escalar;
         }
+        public string LeerUltimoCampo(string columnaselec, string tabla)
+        {
+            string resultado;
+            string query = String.Format("SELECT {0} FROM {1} ORDER BY {0} DESC LIMIT 1;", columnaselec, tabla);
 
+            Conectar();
+
+            cmd = new MySqlCommand(query, con);
+
+            var resultadoquery = cmd.ExecuteScalar();
+
+            if (resultadoquery != null)
+            {
+                resultado = Convert.ToString(resultadoquery);
+                Desconectar();
+            }
+
+            else { resultado = "Ocurrió un error"; }
+
+            return resultado;
+        }
     }
 }

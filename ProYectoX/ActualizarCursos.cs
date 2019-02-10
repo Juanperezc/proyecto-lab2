@@ -60,37 +60,51 @@ namespace ProYectoX
         }
         protected void OnBtnguardarClicked(object sender, EventArgs e)
         {
-            if (this.tipo == 1)
-            {
-                //crear
-                Boolean busc = cone.BuscarSinEstatus("codigo", "cursos", entcodcurso.Text);
-                if (busc == true){
-                    val.DialogOK("Error", "Ya existe un registro con esa clave principal", "error");
-                }else{
-                    cone.EjecutarSentencia("INSERT INTO cursos(codigo,descripcion) VALUES ('" + entcodcurso.Text + "','" + entdescripcioncurso.Text +"')");
-                    val.DialogOK("EXITO", "El registro se ha guardado correctamente", "info");
+            if (validarcurso()){
+                if (this.tipo == 1)
+                {
+                    //crear
+                    Boolean busc = cone.BuscarSinEstatus("codigo", "cursos", entcodcurso.Text);
+                    if (busc == true)
+                    {
+                        val.DialogOK("Error", "Ya existe un registro con esa clave principal", "error");
+                    }
+                    else
+                    {
+                        cone.EjecutarSentencia("INSERT INTO cursos(codigo,descripcion) VALUES ('" + entcodcurso.Text + "','" + entdescripcioncurso.Text + "')");
+                        val.DialogOK("EXITO", "El registro se ha guardado correctamente", "info");
+                        Hide();
+                        ListadoArchivos list = new ListadoArchivos("cursos");
+                        list.Show();
+                    }
+
                 }
+                else
+                {
+                    cone.EjecutarSentencia("UPDATE cursos SET descripcion='" + entdescripcioncurso.Text + "' WHERE id ='" + this.id + "'");
+                    val.DialogOK("EXITO", "El registro se ha guardado correctamente", "info");
+                    //editar
 
-            }
-            else
-            {
-                cone.EjecutarSentencia("UPDATE cursos SET descripcion='" + entdescripcioncurso.Text + "' WHERE id ='" + this.id + "'");
-                val.DialogOK("EXITO", "El registro se ha guardado correctamente", "info");
-                //editar
-      
 
+                }
             }
+           
            
 
         }
-        public void guardarcursos()
+        public bool validarcurso()
         {
             if (entcodcurso.Text == "" || entdescripcioncurso.Text == "")
-            { val.DialogOK("AVISO", "\nDisculpe, debe llenar todos los campos.", "WARNING"); }
+            { 
+                val.DialogOK("AVISO", "\nDisculpe, debe llenar todos los campos.", "WARNING");
+                return false;
+            }
 
-            else{}
+            else{
+                return true;
+            }
         }
-     
+      
         protected void OnBtncancelaractusuClicked(object sender, EventArgs e)
         {
             Hide();

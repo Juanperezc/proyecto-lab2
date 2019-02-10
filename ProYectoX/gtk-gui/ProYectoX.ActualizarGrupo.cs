@@ -20,7 +20,7 @@ namespace ProYectoX
 
 		private global::Gtk.HBox hbox5;
 
-		private global::Gtk.Label lblinstasiggrupo;
+		private global::Gtk.Label lblinstasiggrupo1;
 
 		private global::Gtk.ComboBox comboinstasigrupo;
 
@@ -104,6 +104,7 @@ namespace ProYectoX
 			w1.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.hbox1 = new global::Gtk.HBox();
+			this.hbox1.Name = "hbox1";
 			this.hbox1.Spacing = 6;
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.hbox4 = new global::Gtk.HBox();
@@ -144,16 +145,17 @@ namespace ProYectoX
 			this.hbox5.Name = "hbox5";
 			this.hbox5.Spacing = 6;
 			// Container child hbox5.Gtk.Box+BoxChild
-			this.lblinstasiggrupo = new global::Gtk.Label();
-			this.lblinstasiggrupo.Name = "lblinstasiggrupo";
-			this.lblinstasiggrupo.LabelProp = global::Mono.Unix.Catalog.GetString("Instructor asignado");
-			this.hbox5.Add(this.lblinstasiggrupo);
-			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.lblinstasiggrupo]));
+			this.lblinstasiggrupo1 = new global::Gtk.Label();
+			this.lblinstasiggrupo1.Name = "lblinstasiggrupo1";
+			this.lblinstasiggrupo1.LabelProp = global::Mono.Unix.Catalog.GetString("Instructor asignado");
+			this.hbox5.Add(this.lblinstasiggrupo1);
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.lblinstasiggrupo1]));
 			w6.Position = 0;
 			w6.Expand = false;
 			w6.Fill = false;
 			// Container child hbox5.Gtk.Box+BoxChild
 			this.comboinstasigrupo = global::Gtk.ComboBox.NewText();
+			this.comboinstasigrupo.CanDefault = true;
 			this.comboinstasigrupo.Name = "comboinstasigrupo";
 			this.hbox5.Add(this.comboinstasigrupo);
 			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.comboinstasigrupo]));
@@ -426,8 +428,13 @@ namespace ProYectoX
 			}
 			this.DefaultWidth = 520;
 			this.DefaultHeight = 813;
+			this.comboinstasigrupo.HasDefault = true;
 			this.Show();
 			this.entcodigogrupo.Changed += new global::System.EventHandler(this.OnEntcodigogrupoChanged);
+			this.btnagregarest_grupo.Clicked += new global::System.EventHandler(this.OnBtnagregarestGrupoClicked);
+			this.treeviewest_grupo.RowActivated += new global::Gtk.RowActivatedHandler(this.OnTreeviewestGrupoRowActivated);
+			this.btnguardargrupo.Clicked += new global::System.EventHandler(this.OnBtnguardargrupoClicked);
+			this.btncancelargrupo.Clicked += new global::System.EventHandler(this.OnBtncancelargrupoClicked);
 		}
 	}
 }

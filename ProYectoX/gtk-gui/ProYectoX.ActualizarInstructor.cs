@@ -490,8 +490,9 @@ namespace ProYectoX
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 533;
-			this.DefaultHeight = 389;
+			this.DefaultHeight = 391;
 			this.Show();
+			this.btnguardar.Clicked += new global::System.EventHandler(this.OnBtnguardarClicked);
 			this.btncancelaractinst.Clicked += new global::System.EventHandler(this.OnBtncancelaractusuClicked);
 		}
 	}

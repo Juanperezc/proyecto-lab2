@@ -34,9 +34,9 @@ namespace ProYectoX
 
         protected void OnBtnestudianteClicked(object sender, EventArgs e)
         {
-            ProYectoX.ActualizarEstudiante actest = new ActualizarEstudiante();
-            actest.Show();
-           // ListadoArchivos listarch = new ProYectoX.ListadoArchivos("estudiantes");
+            ListadoArchivos listarch = new ProYectoX.ListadoArchivos("estudiantes");
+            listarch.Show();
+           
             //listarch.Show();
             Hide();
         }

@@ -1,32 +1,133 @@
 ﻿using System;
+using MySql.Data.MySqlClient;
 namespace ProYectoX
 {
     public partial class ActualizarEstudiante : Gtk.Window
     {
+        Validacioness vali;
         int tipo;
+        int id;
         ProYectoX.ConectorBD cone;
-        ProYectoX.Validacioness vali;
         public ActualizarEstudiante(int tip, int id = 0) :
                 base(Gtk.WindowType.Toplevel)
         {
-                 this.Build();
             this.tipo = tip;
+            this.Build();
+            this.tipo = tip;
+            this.id = id;
+            System.Console.WriteLine("tipo " + this.tipo.ToString());
+            System.Console.WriteLine("id " + this.id.ToString());
+            cone = new ProYectoX.ConectorBD(this);
             vali = new ProYectoX.Validacioness();
+            iniciar();
+       
         }
-
-        public void guardarestudiante()
+        public void iniciar()
         {
-            if (entcedest.Text == "" || entnombest.Text == "" 
-                || entapellidoest.Text == "" || entdireccionest.Text == "" 
-                || enttelefonoest.Text == "")
-            { vali.DialogOK("AVISO", "\nDisculpe, debe llenar todos los campos.", "WARNING"); }
-            else {}
-            
+            if (this.tipo == 1)
+            {
+                //crear
+            }
+            else
+            {
+
+                //editar
+                MySqlConnection con = this.cone.getConection();
+                MySqlCommand cmd = new MySqlCommand("SELECT * from estudiantes WHERE id =" + this.id + "", con);
+
+                try
+                {
+                    con.Open();
+                    MySqlDataReader rea = cmd.ExecuteReader();
+                    while (rea.Read())
+                    {
+                        entcedest.Text = rea["cedula"].ToString();
+                        entcedest.Sensitive = false;
+                        entnombest.Text = rea["nombres"].ToString();
+                        entapellidoest.Text = rea["apellidos"].ToString();
+                        entdireccionest.Text = rea["direccion"].ToString();
+                        enttelefonoest.Text = rea["telefono"].ToString();
+                        if (rea["sexo"].ToString() == "F")
+                            comboboxsexest.Active = 0;
+                        else
+                            comboboxsexest.Active = 1;
+
+
+                        calendar6.Date = Convert.ToDateTime(rea["fecha_nacimiento"]);
+
+                    }
+                    rea.Close();
+                }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine("error : " + ex);
+                    throw new Exception(ex.Message);
+                }
+                con.Close();
+
+
+            }
+        }
+        public Boolean validarestudiante()
+        {
+            if (entcedest.Text == "" || entnombest.Text == ""
+                || entapellidoest.Text == "" || entdireccionest.Text == ""
+                || enttelefonoest.Text == "" || comboboxsexest.Active == -1)
+            {
+                vali.DialogOK("AVISO", "\nDisculpe, debe llenar todos los campos.", "WARNING");
+                return false;
+            }
+            else
+            {
+
+                return true;
+
+
+
+
+            }
         }
 
         protected void OnBtnguardarestudianteClicked(object sender, EventArgs e)
         {
-            guardarestudiante();
+            //guardarinstructor();
+            if (validarestudiante())
+            {
+                string fecha_nacimiento = calendar6.GetDate().ToString("yyyy-MM-dd");
+                string sexo = comboboxsexest.ActiveText;
+                if (this.tipo == 1)
+                {
+                    //crear
+                    Boolean busc = cone.BuscarSinEstatus("cedula", "estudiantes", entcedest.Text);
+                    if (busc == true)
+                    {
+                        vali.DialogOK("Error", "Ya existe un registro con esa clave principal", "error");
+                    }
+                    else
+                    {
+
+                        cone.EjecutarSentencia("INSERT INTO estudiantes(cedula,nombres,apellidos,direccion,telefono,fecha_nacimiento,sexo) VALUES " +
+                                               "('" + entcedest.Text + "','" + entnombest.Text + "'" +
+                                               ",'" + entapellidoest.Text + "','" + entdireccionest.Text + "'," +
+                                               "'" + enttelefonoest.Text + "','" + fecha_nacimiento + "','" + sexo + "')");
+                        vali.DialogOK("EXITO", "El registro se ha guardado correctamente", "info");
+                        Hide();
+                        ListadoArchivos list = new ListadoArchivos("instructores");
+                        list.Show();
+                    }
+
+                }
+                else
+                {
+                    cone.EjecutarSentencia("UPDATE estudiantes SET nombres='" + entnombest.Text + "', apellidos='" + entapellidoest.Text + "'" +
+                                           ",direccion='" + entdireccionest.Text + "', telefono='" + enttelefonoest.Text + "'," +
+                                           "fecha_nacimiento='" + fecha_nacimiento + "', sexo='" + sexo + "' WHERE id ='" + this.id + "'");
+                    vali.DialogOK("EXITO", "El registro se ha guardado correctamente", "info");
+                    //editar
+
+
+                }
+            }
         }
 
         protected void OnBtncancelaractusuClicked(object sender, EventArgs e)
@@ -63,6 +164,10 @@ namespace ProYectoX
         protected void OnEntapellidoestChanged(object sender, EventArgs e)
         {
             vali.ValidarLetras(entapellidoest);
+        }
+
+        protected void OnComboboxsexestChanged(object sender, EventArgs e)
+        {
         }
     }
 }

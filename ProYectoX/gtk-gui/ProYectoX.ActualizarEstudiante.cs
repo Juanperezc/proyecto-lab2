@@ -220,6 +220,7 @@ namespace ProYectoX
 			this.comboboxsexest.AppendText(global::Mono.Unix.Catalog.GetString("F"));
 			this.comboboxsexest.AppendText(global::Mono.Unix.Catalog.GetString("M"));
 			this.comboboxsexest.Name = "comboboxsexest";
+			this.comboboxsexest.Active = 0;
 			this.hbox17.Add(this.comboboxsexest);
 			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox17[this.comboboxsexest]));
 			w13.Position = 1;
@@ -284,6 +285,8 @@ namespace ProYectoX
 			this.hbox20.Add(this.drawingarea9);
 			global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.hbox20[this.drawingarea9]));
 			w20.Position = 0;
+			w20.Expand = false;
+			w20.Fill = false;
 			this.hbox13.Add(this.hbox20);
 			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.hbox13[this.hbox20]));
 			w21.Position = 1;
@@ -462,11 +465,12 @@ namespace ProYectoX
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 533;
-			this.DefaultHeight = 389;
+			this.DefaultHeight = 395;
 			this.Show();
 			this.entcedest.Changed += new global::System.EventHandler(this.OnEntcedestChanged);
 			this.enttelefonoest.Changed += new global::System.EventHandler(this.OnEnttelefonoestChanged);
 			this.entnombest.Changed += new global::System.EventHandler(this.OnEntnombestChanged);
+			this.comboboxsexest.Changed += new global::System.EventHandler(this.OnComboboxsexestChanged);
 			this.entapellidoest.Changed += new global::System.EventHandler(this.OnEntapellidoestChanged);
 			this.entdireccionest.Changed += new global::System.EventHandler(this.OnEntdireccionestChanged);
 			this.btnguardarestudiante.Clicked += new global::System.EventHandler(this.OnBtnguardarestudianteClicked);
