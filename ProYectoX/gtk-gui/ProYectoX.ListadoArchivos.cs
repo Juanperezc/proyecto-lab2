@@ -389,7 +389,7 @@ namespace ProYectoX
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 424;
+			this.DefaultWidth = 972;
 			this.DefaultHeight = 534;
 			this.Show();
 			this.entbusqueda.Changed += new global::System.EventHandler(this.OnEntbusquedaChanged);

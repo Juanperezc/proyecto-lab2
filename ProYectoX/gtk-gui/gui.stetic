@@ -394,10 +394,6 @@
             <child>
               <widget class="Gtk.Button" id="btnestudiante">
                 <property name="MemberName" />
-                <property name="Xpad">96</property>
-                <property name="Ypad">2</property>
-                <property name="Xalign">0</property>
-                <property name="Yalign">0</property>
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Estudiante</property>
@@ -412,14 +408,11 @@
             <child>
               <widget class="Gtk.Button" id="btncurso">
                 <property name="MemberName" />
-                <property name="Xpad">87</property>
-                <property name="Ypad">2</property>
-                <property name="Xalign">1</property>
-                <property name="Yalign">0</property>
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Curso</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnBtncursoClicked" />
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -441,8 +434,6 @@
             <child>
               <widget class="Gtk.Button" id="btngrupo">
                 <property name="MemberName" />
-                <property name="Xpad">44</property>
-                <property name="Xalign">0</property>
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Grupo</property>
@@ -576,9 +567,6 @@
             <child>
               <widget class="Gtk.DrawingArea" id="drawingarea1">
                 <property name="MemberName" />
-                <property name="HeightRequest">28</property>
-                <property name="Xpad">55</property>
-                <property name="Xalign">1</property>
               </widget>
               <packing>
                 <property name="Position">2</property>
@@ -1833,6 +1821,7 @@ M</property>
                 <property name="CanFocus">True</property>
                 <property name="IsEditable">True</property>
                 <property name="InvisibleChar">●</property>
+                <signal name="Changed" handler="OnEntbusquedaChanged" />
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -1860,6 +1849,7 @@ M</property>
                     <property name="MemberName" />
                     <property name="CanFocus">True</property>
                     <property name="ShowScrollbars">True</property>
+                    <signal name="RowActivated" handler="OnTreeviewlistadoRowActivated" />
                   </widget>
                 </child>
               </widget>
@@ -2805,9 +2795,12 @@ M</property>
                     <child>
                       <widget class="Gtk.ComboBox" id="comboboxsexest">
                         <property name="MemberName" />
+                        <property name="CanDefault">True</property>
+                        <property name="HasDefault">True</property>
                         <property name="IsTextCombo">True</property>
                         <property name="Items" translatable="yes">F
 M</property>
+                        <property name="Active">1</property>
                       </widget>
                       <packing>
                         <property name="Position">1</property>
@@ -2943,10 +2936,6 @@ M</property>
             <child>
               <widget class="Gtk.HBox" id="hbox23">
                 <property name="MemberName" />
-                <property name="Xpad">148</property>
-                <property name="Ypad">2</property>
-                <property name="Xalign">0</property>
-                <property name="Yalign">0</property>
                 <property name="Spacing">6</property>
                 <child>
                   <widget class="Gtk.DrawingArea" id="drawingarea5">
@@ -3011,21 +3000,6 @@ M</property>
               </widget>
               <packing>
                 <property name="Position">0</property>
-                <property name="AutoSize">True</property>
-                <property name="Expand">False</property>
-                <property name="Fill">False</property>
-              </packing>
-            </child>
-            <child>
-              <widget class="Gtk.Label" id="lblhora">
-                <property name="MemberName" />
-                <property name="Xpad">109</property>
-                <property name="Ypad">2</property>
-                <property name="Xalign">1</property>
-                <property name="Yalign">0</property>
-              </widget>
-              <packing>
-                <property name="Position">1</property>
                 <property name="AutoSize">True</property>
                 <property name="Expand">False</property>
                 <property name="Fill">False</property>
@@ -3185,17 +3159,6 @@ M</property>
             <property name="Fill">False</property>
           </packing>
         </child>
-      </widget>
-    </child>
-  </widget>
-  <widget class="Gtk.Window" id="ProYectoX.ListadoArchivos" design-size="424 534">
-    <property name="MemberName" />
-    <property name="Title" translatable="yes">ListadoArchivos</property>
-    <property name="WindowPosition">CenterOnParent</property>
-    <child>
-      <widget class="Gtk.VBox" id="vbox1">
-        <property name="MemberName" />
-        <property name="Spacing">6</property>
         <child>
           <widget class="Gtk.HBox" id="hbox29">
             <property name="MemberName" />
@@ -3332,10 +3295,6 @@ M</property>
             <child>
               <widget class="Gtk.HBox" id="hbox7">
                 <property name="MemberName" />
-                <property name="CanFocus">True</property>
-                <property name="IsEditable">True</property>
-                <property name="InvisibleChar">●</property>
-                <signal name="Changed" handler="OnEntbusquedaChanged" />
                 <property name="Spacing">6</property>
                 <child>
                   <widget class="Gtk.Label" id="lblinstasiggrupo">

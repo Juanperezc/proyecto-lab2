@@ -248,6 +248,7 @@ namespace ProYectoX
 			this.btnusuario.Clicked += new global::System.EventHandler(this.OnButton1Clicked);
 			this.btnarchinstructor.Clicked += new global::System.EventHandler(this.OnBtnarchinstructorClicked);
 			this.btnestudiante.Clicked += new global::System.EventHandler(this.OnBtnestudianteClicked);
+			this.btncurso.Clicked += new global::System.EventHandler(this.OnBtncursoClicked);
 			this.btngrupo.Clicked += new global::System.EventHandler(this.OnBtngrupoClicked);
 			this.btnturno.Clicked += new global::System.EventHandler(this.OnButton4Clicked);
 			this.btnsalirarchivos.Clicked += new global::System.EventHandler(this.OnBtnsalirlistClicked);

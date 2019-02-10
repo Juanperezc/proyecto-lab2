@@ -285,7 +285,9 @@ namespace ProYectoX
 			this.comboboxsexest = global::Gtk.ComboBox.NewText();
 			this.comboboxsexest.AppendText(global::Mono.Unix.Catalog.GetString("F"));
 			this.comboboxsexest.AppendText(global::Mono.Unix.Catalog.GetString("M"));
+			this.comboboxsexest.CanDefault = true;
 			this.comboboxsexest.Name = "comboboxsexest";
+			this.comboboxsexest.Active = 1;
 			this.hbox20.Add(this.comboboxsexest);
 			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.hbox20[this.comboboxsexest]));
 			w21.Position = 1;
@@ -444,6 +446,7 @@ namespace ProYectoX
 			}
 			this.DefaultWidth = 533;
 			this.DefaultHeight = 234;
+			this.comboboxsexest.HasDefault = true;
 			this.Show();
 			this.btnguardarestudiante.Clicked += new global::System.EventHandler(this.OnBtnguardarestudianteClicked);
 			this.btncancelaractusu.Clicked += new global::System.EventHandler(this.OnBtncancelaractusuClicked);

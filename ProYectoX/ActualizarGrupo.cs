@@ -3,10 +3,12 @@ namespace ProYectoX
 {
     public partial class ActualizarGrupo : Gtk.Window
     {
-        public ActualizarGrupo() :
+        int tipo;
+        public ActualizarGrupo(int tip, int id = 0) :
                 base(Gtk.WindowType.Toplevel)
         {
             this.Build();
+            this.tipo = tip;
         }
 
         protected void OnBtnguardargrupoClicked(object sender, EventArgs e)

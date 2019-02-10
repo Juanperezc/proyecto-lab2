@@ -132,6 +132,39 @@ namespace ProYectoX
             }
             return false;
         }
+        public bool BuscarSinEstatus(string col, string tabla, string parametro)
+        {
+            string sentencia = string.Format("SELECT count({0}) FROM {1} WHERE {0} = '{2}'", col, tabla, parametro);
+            //Abre la conexión.
+            if (Conectar())
+            {
+                //Crea un comando
+                MySqlCommand cmd = new MySqlCommand(sentencia, con);
+
+                try
+                {
+                    int n = Convert.ToInt16(cmd.ExecuteScalar());
+                    if (n == 1)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    Mensaje(ex.Message, ButtonsType.Ok, MessageType.Error, "Error");
+                }
+                finally
+                {
+                    cmd.Dispose();
+                    Desconectar();
+                }
+            }
+            return false;
+        }
         public bool Buscar2(string col, string tabla, string parametro, string col2, string parametro2)
         {
             string sentencia = string.Format("SELECT count({0}) FROM {1} WHERE {0} = '{2}' AND {3} = '{4}' AND estatus = 'A'", col, tabla, parametro, col2, parametro2);

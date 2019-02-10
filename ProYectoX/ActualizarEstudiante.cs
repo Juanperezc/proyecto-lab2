@@ -3,10 +3,13 @@ namespace ProYectoX
 {
     public partial class ActualizarEstudiante : Gtk.Window
     {
-        public ActualizarEstudiante() :
+        int tipo;
+        ProYectoX.ConectorBD cone;
+        public ActualizarEstudiante(int tip, int id = 0) :
                 base(Gtk.WindowType.Toplevel)
         {
             this.Build();
+            this.tipo = tip;
         }
 
         protected void OnBtnguardarestudianteClicked(object sender, EventArgs e)
