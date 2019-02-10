@@ -27,15 +27,17 @@ namespace ProYectoX
 
         protected void OnBtnarchinstructorClicked(object sender, EventArgs e)
         {
-            ProYectoX.ListadoArchivos list = new ListadoArchivos("estudiantes");
+           /* ProYectoX.ListadoArchivos list = new ListadoArchivos("estudiantes");
             list.Show();
-            Hide();
+            Hide();*/
         }
 
         protected void OnBtnestudianteClicked(object sender, EventArgs e)
         {
-            ListadoArchivos listarch = new ProYectoX.ListadoArchivos("estudiantes");
-            listarch.Show();
+            ProYectoX.ActualizarEstudiante actest = new ActualizarEstudiante();
+            actest.Show();
+           // ListadoArchivos listarch = new ProYectoX.ListadoArchivos("estudiantes");
+            //listarch.Show();
             Hide();
         }
 
@@ -45,16 +47,16 @@ namespace ProYectoX
 
         protected void OnBtncursoClicked(object sender, EventArgs e)
         {
-            ProYectoX.ActualizarCursos actcurso = new ProYectoX.ActualizarCursos();
+            /*ProYectoX.ActualizarCursos actcurso = new ProYectoX.ActualizarCursos();
             actcurso.Show();
-            Hide();
+            Hide();*/
         }
 
         protected void OnBtngrupoClicked(object sender, EventArgs e)
         {
-            ProYectoX.ActualizarGrupo actgrupo = new ProYectoX.ActualizarGrupo();
+            /*ProYectoX.ActualizarGrupo actgrupo = new ProYectoX.ActualizarGrupo();
             actgrupo.Show();
-            Hide();
+            Hide();*/
         }
 
         protected void OnButton4Clicked(object sender, EventArgs e)
@@ -63,6 +65,9 @@ namespace ProYectoX
 
         protected void OnBtnsalirlistClicked(object sender, EventArgs e)
         {
+            /*ProYectoX.ActualizarInstructor actinst = new ActualizarInstructor();
+            actinst.Show();
+            Hide();*/
         }
 
         protected void OnBtncancelarlistClicked(object sender, EventArgs e)
