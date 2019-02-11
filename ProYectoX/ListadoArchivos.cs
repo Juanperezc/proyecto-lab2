@@ -771,5 +771,10 @@ namespace ProYectoX
 
           
         }
+
+        protected void OnBtnsalirlistClicked(object sender, EventArgs e)
+        {
+            this.Destroy();
+        }
     }
 }

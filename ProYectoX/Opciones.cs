@@ -60,14 +60,12 @@ namespace ProYectoX
             return true;
         }
 
-        protected void OnBtnsaliropcionesClicked(object sender, EventArgs e)
-        {
-        }
+      
 
         protected void OnBtncanClicked(object sender, EventArgs e)
         {
-            new ProYectoX.MainClass();
-            Hide();
+            new MainWindow();
+            this.Destroy();
         }
     }
   

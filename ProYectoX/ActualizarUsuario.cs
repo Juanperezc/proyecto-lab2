@@ -127,7 +127,7 @@ namespace ProYectoX
         }
 
         protected void OnBtnsaliractusuClicked(object sender, EventArgs e)
-        {
+        {this.Destroy();
         }
 
         protected void OnBtnguardarClicked(object sender, EventArgs e)
