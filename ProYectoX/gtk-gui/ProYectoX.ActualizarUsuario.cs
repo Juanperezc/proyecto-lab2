@@ -226,6 +226,7 @@ namespace ProYectoX
 			this.DefaultWidth = 523;
 			this.DefaultHeight = 209;
 			this.Show();
+			this.btnguardar.Clicked += new global::System.EventHandler(this.OnBtnguardarClicked);
 			this.btncancelaractusu.Clicked += new global::System.EventHandler(this.OnBtncancelaractusuClicked);
 		}
 	}

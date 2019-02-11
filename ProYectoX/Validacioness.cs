@@ -253,6 +253,16 @@ namespace ProYectoX
             return  - 1;
         }
        
-
+        public int searchArrayPosition(string[] arr, string value)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i].ToString() == value.ToString())
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
     }
 }

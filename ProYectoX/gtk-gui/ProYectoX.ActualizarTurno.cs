@@ -18,13 +18,13 @@ namespace ProYectoX
 
 		private global::Gtk.Label lblhorainicturno;
 
-		private global::Gtk.Entry enthorainicturno;
+		private global::Gtk.ComboBox combobox2;
 
 		private global::Gtk.HBox hbox16;
 
 		private global::Gtk.Label lblhoracierreturno;
 
-		private global::Gtk.Entry enthoracierreturno;
+		private global::Gtk.ComboBox combobox4;
 
 		private global::Gtk.HBox hbox19;
 
@@ -105,14 +105,24 @@ namespace ProYectoX
 			w5.Expand = false;
 			w5.Fill = false;
 			// Container child hbox15.Gtk.Box+BoxChild
-			this.enthorainicturno = new global::Gtk.Entry();
-			this.enthorainicturno.CanFocus = true;
-			this.enthorainicturno.Name = "enthorainicturno";
-			this.enthorainicturno.IsEditable = true;
-			this.enthorainicturno.InvisibleChar = '●';
-			this.hbox15.Add(this.enthorainicturno);
-			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox15[this.enthorainicturno]));
+			this.combobox2 = global::Gtk.ComboBox.NewText();
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("8:00"));
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("9:00"));
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("10:00"));
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("11:00"));
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("12:00"));
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("13:00"));
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("14:00"));
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("15:00"));
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("16:00"));
+			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("17:00"));
+			this.combobox2.Name = "combobox2";
+			this.combobox2.Active = 0;
+			this.hbox15.Add(this.combobox2);
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox15[this.combobox2]));
 			w6.Position = 1;
+			w6.Expand = false;
+			w6.Fill = false;
 			this.vbox2.Add(this.hbox15);
 			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.hbox15]));
 			w7.Position = 2;
@@ -132,14 +142,24 @@ namespace ProYectoX
 			w8.Expand = false;
 			w8.Fill = false;
 			// Container child hbox16.Gtk.Box+BoxChild
-			this.enthoracierreturno = new global::Gtk.Entry();
-			this.enthoracierreturno.CanFocus = true;
-			this.enthoracierreturno.Name = "enthoracierreturno";
-			this.enthoracierreturno.IsEditable = true;
-			this.enthoracierreturno.InvisibleChar = '●';
-			this.hbox16.Add(this.enthoracierreturno);
-			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox16[this.enthoracierreturno]));
+			this.combobox4 = global::Gtk.ComboBox.NewText();
+			this.combobox4.AppendText(global::Mono.Unix.Catalog.GetString("8:00"));
+			this.combobox4.AppendText(global::Mono.Unix.Catalog.GetString("9:00"));
+			this.combobox4.AppendText(global::Mono.Unix.Catalog.GetString("10:00"));
+			this.combobox4.AppendText(global::Mono.Unix.Catalog.GetString("11:00"));
+			this.combobox4.AppendText(global::Mono.Unix.Catalog.GetString("12:00"));
+			this.combobox4.AppendText(global::Mono.Unix.Catalog.GetString("13:00"));
+			this.combobox4.AppendText(global::Mono.Unix.Catalog.GetString("14:00"));
+			this.combobox4.AppendText(global::Mono.Unix.Catalog.GetString("15:00"));
+			this.combobox4.AppendText(global::Mono.Unix.Catalog.GetString("16:00"));
+			this.combobox4.AppendText(global::Mono.Unix.Catalog.GetString("17:00"));
+			this.combobox4.Name = "combobox4";
+			this.combobox4.Active = 0;
+			this.hbox16.Add(this.combobox4);
+			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox16[this.combobox4]));
 			w9.Position = 1;
+			w9.Expand = false;
+			w9.Fill = false;
 			this.vbox2.Add(this.hbox16);
 			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.hbox16]));
 			w10.Position = 3;
@@ -232,8 +252,10 @@ namespace ProYectoX
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 404;
-			this.DefaultHeight = 178;
+			this.DefaultHeight = 207;
 			this.Show();
+			this.btnguardarturno.Clicked += new global::System.EventHandler(this.OnBtnguardarturnoClicked);
+			this.btncancelaractturno.Clicked += new global::System.EventHandler(this.OnBtncancelaractturnoClicked);
 		}
 	}
 }
