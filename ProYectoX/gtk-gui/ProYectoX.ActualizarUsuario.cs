@@ -159,6 +159,7 @@ namespace ProYectoX
 			w11.Fill = false;
 			// Container child vbox3.Gtk.Box+BoxChild
 			this.hbox9 = new global::Gtk.HBox();
+			this.hbox9.Name = "hbox9";
 			this.hbox9.Spacing = 6;
 			// Container child hbox9.Gtk.Box+BoxChild
 			this.btnguardar = new global::Gtk.Button();

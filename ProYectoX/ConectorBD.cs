@@ -16,7 +16,7 @@ namespace ProYectoX
             scb.Port = 3306;
             scb.UserID = "root";
             scb.Database = "proyectolabii";
-            scb.Password = "";
+            scb.Password = "2514182657";
             con = new MySqlConnection(scb.ConnectionString);
             Vn = nomvent;
 

@@ -1483,6 +1483,7 @@ M</property>
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Label" translatable="yes">Listados de Cursos</property>
+                <property name="Active">True</property>
                 <property name="DrawIndicator">True</property>
                 <property name="HasLabel">True</property>
                 <property name="UseUnderline">True</property>
@@ -2496,6 +2497,7 @@ M</property>
                     <property name="Type">TextOnly</property>
                     <property name="Label" translatable="yes">Guardar</property>
                     <property name="UseUnderline">True</property>
+                    <signal name="Clicked" handler="OnBtnguardarClicked" />
                   </widget>
                   <packing>
                     <property name="Position">0</property>
@@ -2573,7 +2575,7 @@ M</property>
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="ProYectoX.ActualizarEstudiante" design-size="533 453">
+  <widget class="Gtk.Window" id="ProYectoX.ActualizarEstudiante" design-size="533 455">
     <property name="MemberName" />
     <property name="Title" translatable="yes">ActualizarEstudiante</property>
     <property name="WindowPosition">Center</property>
@@ -2897,35 +2899,6 @@ M</property>
             <child>
               <widget class="Gtk.HSeparator" id="hseparator59">
                 <property name="MemberName" />
-                <property name="Spacing">6</property>
-                <child>
-                  <widget class="Gtk.Button" id="btnguardar">
-                    <property name="MemberName" />
-                    <property name="CanFocus">True</property>
-                    <property name="Type">TextOnly</property>
-                    <property name="Label" translatable="yes">Guardar</property>
-                    <property name="UseUnderline">True</property>
-                    <signal name="Clicked" handler="OnBtnguardarClicked" />
-                  </widget>
-                  <packing>
-                    <property name="Position">0</property>
-                    <property name="AutoSize">False</property>
-                  </packing>
-                </child>
-                <child>
-                  <widget class="Gtk.Button" id="btncancelaractusu">
-                    <property name="MemberName" />
-                    <property name="CanFocus">True</property>
-                    <property name="Type">TextOnly</property>
-                    <property name="Label" translatable="yes">Cancelar</property>
-                    <property name="UseUnderline">True</property>
-                    <signal name="Clicked" handler="OnBtncancelaractusuClicked" />
-                  </widget>
-                  <packing>
-                    <property name="Position">1</property>
-                    <property name="AutoSize">False</property>
-                  </packing>
-                </child>
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -4028,7 +4001,7 @@ M</property>
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="ProYectoX.ActualizarTurno" design-size="404 178">
+  <widget class="Gtk.Window" id="ProYectoX.ActualizarTurno" design-size="404 186">
     <property name="MemberName" />
     <property name="Title" translatable="yes">ActualizarTurno</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -4101,15 +4074,27 @@ M</property>
               </packing>
             </child>
             <child>
-              <widget class="Gtk.Entry" id="enthorainicturno">
+              <widget class="Gtk.ComboBox" id="combobox2">
                 <property name="MemberName" />
-                <property name="CanFocus">True</property>
-                <property name="IsEditable">True</property>
-                <property name="InvisibleChar">●</property>
+                <property name="IsTextCombo">True</property>
+                <property name="Items" translatable="yes">8:00
+9:00
+10:00
+11:00
+12:00
+13:00
+14:00
+15:00
+16:00
+17:00
+</property>
+                <property name="Active">0</property>
               </widget>
               <packing>
                 <property name="Position">1</property>
                 <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
               </packing>
             </child>
           </widget>
@@ -4137,15 +4122,26 @@ M</property>
               </packing>
             </child>
             <child>
-              <widget class="Gtk.Entry" id="enthoracierreturno">
+              <widget class="Gtk.ComboBox" id="combobox4">
                 <property name="MemberName" />
-                <property name="CanFocus">True</property>
-                <property name="IsEditable">True</property>
-                <property name="InvisibleChar">●</property>
+                <property name="IsTextCombo">True</property>
+                <property name="Items" translatable="yes">8:00
+9:00
+10:00
+11:00
+12:00
+13:00
+14:00
+15:00
+16:00
+17:00</property>
+                <property name="Active">0</property>
               </widget>
               <packing>
                 <property name="Position">1</property>
                 <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
               </packing>
             </child>
           </widget>
@@ -4167,6 +4163,7 @@ M</property>
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Guardar</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnBtnguardarturnoClicked" />
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -4180,6 +4177,7 @@ M</property>
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Cancelar</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnBtncancelaractturnoClicked" />
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -4379,20 +4377,6 @@ M</property>
             <property name="Fill">False</property>
           </packing>
         </child>
-<<<<<<< HEAD
-      </widget>
-    </child>
-  </widget>
-  <widget class="Gtk.Window" id="ProYectoX.ActualizarTurno" design-size="404 207">
-    <property name="MemberName" />
-    <property name="Title" translatable="yes">ActualizarTurno</property>
-    <property name="WindowPosition">CenterOnParent</property>
-    <child>
-      <widget class="Gtk.VBox" id="vbox2">
-        <property name="MemberName" />
-        <property name="Spacing">6</property>
-=======
->>>>>>> aebf6239a8b8046dc594e9aeab7ba401c552be41
         <child>
           <widget class="Gtk.HSeparator" id="hseparator22">
             <property name="MemberName" />
@@ -4422,10 +4406,6 @@ M</property>
             <child>
               <widget class="Gtk.Label" id="lblhora">
                 <property name="MemberName" />
-                <property name="CanFocus">True</property>
-                <property name="IsEditable">True</property>
-                <property name="InvisibleChar">●</property>
-                <signal name="Changed" handler="OnEntdescripcionturnoChanged" />
                 <property name="HeightRequest">28</property>
                 <property name="Xpad">55</property>
                 <property name="Xalign">1</property>
@@ -4497,20 +4477,6 @@ M</property>
               </packing>
             </child>
             <child>
-              <widget class="Gtk.ComboBox" id="combobox2">
-                <property name="MemberName" />
-                <property name="IsTextCombo">True</property>
-                <property name="Items" translatable="yes">8:00
-9:00
-10:00
-11:00
-12:00
-13:00
-14:00
-15:00
-16:00
-17:00</property>
-                <property name="Active">0</property>
               <widget class="Gtk.HBox" id="hbox3">
                 <property name="MemberName" />
                 <property name="Spacing">6</property>
@@ -4573,20 +4539,6 @@ M</property>
               </packing>
             </child>
             <child>
-              <widget class="Gtk.ComboBox" id="combobox4">
-                <property name="MemberName" />
-                <property name="IsTextCombo">True</property>
-                <property name="Items" translatable="yes">8:00
-9:00
-10:00
-11:00
-12:00
-13:00
-14:00
-15:00
-16:00
-17:00</property>
-                <property name="Active">0</property>
               <widget class="Gtk.Calendar" id="calendar2">
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
@@ -4647,7 +4599,6 @@ M</property>
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Atras</property>
                 <property name="UseUnderline">True</property>
-                <signal name="Clicked" handler="OnBtnguardarturnoClicked" />
                 <signal name="Clicked" handler="OnBntcanClicked" />
               </widget>
               <packing>
@@ -4662,7 +4613,6 @@ M</property>
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Salir</property>
                 <property name="UseUnderline">True</property>
-                <signal name="Clicked" handler="OnBtncancelaractturnoClicked" />
                 <signal name="Clicked" handler="OnButton5Clicked" />
               </widget>
               <packing>

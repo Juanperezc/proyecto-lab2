@@ -547,7 +547,7 @@ namespace ProYectoX
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 533;
-			this.DefaultHeight = 453;
+			this.DefaultHeight = 455;
 			this.Show();
 			this.entcedest.Changed += new global::System.EventHandler(this.OnEntcedestChanged);
 			this.enttelefonoest.Changed += new global::System.EventHandler(this.OnEnttelefonoestChanged);

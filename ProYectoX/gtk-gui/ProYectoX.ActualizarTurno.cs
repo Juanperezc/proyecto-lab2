@@ -116,6 +116,7 @@ namespace ProYectoX
 			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("15:00"));
 			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("16:00"));
 			this.combobox2.AppendText(global::Mono.Unix.Catalog.GetString("17:00"));
+			this.combobox2.AppendText("");
 			this.combobox2.Name = "combobox2";
 			this.combobox2.Active = 0;
 			this.hbox15.Add(this.combobox2);
@@ -252,7 +253,7 @@ namespace ProYectoX
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 404;
-			this.DefaultHeight = 207;
+			this.DefaultHeight = 186;
 			this.Show();
 			this.btnguardarturno.Clicked += new global::System.EventHandler(this.OnBtnguardarturnoClicked);
 			this.btncancelaractturno.Clicked += new global::System.EventHandler(this.OnBtncancelaractturnoClicked);
