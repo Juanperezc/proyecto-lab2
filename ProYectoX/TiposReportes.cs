@@ -27,18 +27,23 @@ namespace ProYectoX
         {
             
 
-            // if(radiobutton1.checked == true){}
-            //pero no se como se llama el metodo en mono que funcione como 
-            //checked
-            //else {}
+
             if(radiobutton1.Active == true){
-              new ProYectoX.ReporteCursos();
+              new ProYectoX.ReportesCursos();
                 this.Hide();
             }
             else{
-              new ProYectoX.ReporteGrupos();
+             
+                new ProYectoX.ReportesGrupos();
                 this.Hide();
             }
+        }
+
+        protected void OnBtnsalirClicked(object sender, EventArgs e)
+        {
+            new ProYectoX.Opciones();
+            Hide();
+            
         }
     }
 }

@@ -95,7 +95,7 @@ public partial class MainWindow : Gtk.Window
     }
     protected void OnBtnsalirClicked(object sender, EventArgs e)
     {
-        Application.Quit();
+        this.Destroy();
     }
 
     protected void OnEntusuarioActivated(object sender, EventArgs e)

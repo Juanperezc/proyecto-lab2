@@ -23,7 +23,22 @@ namespace ProYectoX
             cone = new ProYectoX.ConectorBD(this);
             vali = new ProYectoX.Validacioness();
             iniciar();
+            ComenzarTimer();
        
+        }
+        protected void ComenzarTimer()
+        {
+            // Se ejecuta cada 1000 milisegundos (1s)
+
+            GLib.Timeout.Add(1000, new GLib.TimeoutHandler(update_fechahora));
+        }
+
+        protected bool update_fechahora()
+        {
+            lblfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblhora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+
+            return true;
         }
         public void iniciar()
         {
@@ -171,5 +186,6 @@ namespace ProYectoX
             ListadoArchivos list = new ListadoArchivos("instructores");
             list.Show();
         }
+
     }
 }

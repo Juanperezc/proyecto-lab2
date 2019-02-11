@@ -4,28 +4,36 @@ using Gtk;
 using MySql.Data.MySqlClient;
 namespace ProYectoX
 {
-    public partial class ReporteGrupos : Gtk.Window
+    public partial class ReportesGrupos : Gtk.Window
     {
         ProYectoX.ConectorBD cone;
-        ListStore dt = new ListStore(typeof(string), typeof(string), typeof(string), typeof(string), typeof(string));
-        public ReporteGrupos() : base(Gtk.WindowType.Toplevel)
+
+        Gtk.ListStore dt = new ListStore(typeof(string), typeof(string), typeof(string), typeof(string), typeof(int));
+        public ReportesGrupos() : base(Gtk.WindowType.Toplevel)
 
         {
             this.Build();
             ComenzarTimer();
             cone = new ProYectoX.ConectorBD(this);
+            treart.Model = dt;
             treart.AppendColumn("Codigo del Curso", new CellRendererText(), "text", 0);
             treart.AppendColumn("Nombre del Curso", new CellRendererText(), "text", 1);
             treart.AppendColumn("Fecha Inicial", new CellRendererText(), "text", 2);
-            treart.AppendColumn("Fecha Finl", new CellRendererText(), "text", 3);
+            treart.AppendColumn("Fecha Final", new CellRendererText(), "text", 3);
             treart.AppendColumn("Turno", new CellRendererText(), "text", 4);
+            selecporfecha();
+
         }
 
         public void selecporfecha()
         {
+            
+           
+
             DateTime fecha = DateTime.Today;
+            Console.WriteLine(fecha.ToString("yyyy-MM-dd"));
             MySqlConnection con = this.cone.getConection();
-            MySqlCommand cmd = new MySqlCommand("SELECT cod_grupo, curso_id, fecha_inicio, fecha_fin, turno_id FROM grupos WHERE fecha_fin <= '" + fecha + "'AND estatus = 'A'", con);
+            MySqlCommand cmd = new MySqlCommand("SELECT g.cod_grupo, c.descripcion, g.fecha_inicio, g.fecha_fin, g.turno_id FROM grupos as g JOIN cursos as c ON c.id = g.curso_id WHERE g.fecha_fin <= '" + fecha.ToString("yyyy-MM-dd") + "' AND c.estatus = 'A' AND g.estatus = 'A'", con); 
 
             try
             {
@@ -34,7 +42,7 @@ namespace ProYectoX
 
                 while (rea.Read())
                 {
-                    dt.AppendValues((string)rea["cod_grupo"],(int)rea["curso_id"],(string)rea["fecha_inicio"],(string)rea["fecha_fin"],(int)rea["turno_id"]);
+                    dt.AppendValues(rea["cod_grupo"].ToString(), rea["descripcion"].ToString(), rea["fecha_inicio"].ToString(), rea["fecha_fin"].ToString(), (int)rea["turno_id"]);
 
                 }
                 rea.Close();
@@ -45,7 +53,7 @@ namespace ProYectoX
                 throw new Exception(ex.Message);
             }
             con.Close();
-
+           
         }
         protected void ComenzarTimer()
         {
@@ -61,5 +69,16 @@ namespace ProYectoX
 
             return true;
         }
+
+        protected void OnBtnsssClicked(object sender, EventArgs e)
+        {
+            this.Destroy();
+        }
+
+        protected void OnBtncaaClicked(object sender, EventArgs e)
+        {
+            new ProYectoX.TiposReportes();
+            Hide();
+        }
     }
-}
+    }

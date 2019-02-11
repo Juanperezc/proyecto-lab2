@@ -11,6 +11,7 @@ namespace ProYectoX
 
         protected void OnBtnsalirmasopcClicked(object sender, EventArgs e)
         {
+            this.Destroy();
         }
 
         protected void OnBtncancelarmasopcClicked(object sender, EventArgs e)

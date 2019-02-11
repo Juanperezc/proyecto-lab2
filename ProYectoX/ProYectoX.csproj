@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -59,27 +58,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="MainWindow.cs" />
     <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Opciones.cs" />
     <Compile Include="gtk-gui\ProYectoX.Opciones.cs" />
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="ListadoArchivos.cs" />
     <Compile Include="ArchivosMaestros.cs" />
     <Compile Include="gtk-gui\ProYectoX.ArchivosMaestros.cs" />
     <Compile Include="ActualizarInstructor.cs" />
     <Compile Include="gtk-gui\ProYectoX.ActualizarInstructor.cs" />
-    <Compile Include="Opciones2.cs" />
-    <Compile Include="gtk-gui\ProYectoX.Opciones2.cs" />
     <Compile Include="ConectorBD.cs" />
     <Compile Include="Validacioness.cs" />
+    <Compile Include="ReportesCursos.cs" />
     <Compile Include="TiposReportes.cs" />
     <Compile Include="gtk-gui\ProYectoX.TiposReportes.cs" />
-    <Compile Include="ReporteCursos.cs" />
-    <Compile Include="gtk-gui\ProYectoX.ReporteCursos.cs" />
-    <Compile Include="ReporteGrupos.cs" />
-    <Compile Include="gtk-gui\ProYectoX.ReporteGrupos.cs" />
-    <Compile Include="ListadoArchivos.cs" />
     <Compile Include="Masopciones.cs" />
     <Compile Include="gtk-gui\ProYectoX.Masopciones.cs" />
     <Compile Include="ActualizarUsuario.cs" />
@@ -93,6 +87,9 @@
     <Compile Include="ActualizarTurno.cs" />
     <Compile Include="gtk-gui\ProYectoX.ActualizarTurno.cs" />
     <Compile Include="gtk-gui\ProYectoX.ListadoArchivos.cs" />
+    <Compile Include="ReportesGrupos.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ReportesGrupos.cs" />
+    <Compile Include="gtk-gui\ProYectoX.ReportesCursos.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

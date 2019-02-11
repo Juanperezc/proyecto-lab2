@@ -71,15 +71,13 @@ namespace ProYectoX
 
         protected void OnBtnsalirlistClicked(object sender, EventArgs e)
         {
-            /*ProYectoX.ActualizarInstructor actinst = new ActualizarInstructor();
-            actinst.Show();
-            Hide();*/
+            this.Destroy();
         }
 
         protected void OnBtncancelarlistClicked(object sender, EventArgs e)
         {
-           // new ProYectoX.Opciones();
-            // Hide();
+            new ProYectoX.Opciones();
+            Hide();
         }
     }
 }
